@@ -16,5 +16,10 @@ namespace YetAnotherFileFinder
         {
             InitializeComponent();
         }
+
+        private void YetAnotherFileFinder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
