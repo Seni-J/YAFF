@@ -1,0 +1,10 @@
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\bin\Debug\YetAnotherFileFinder.exe.config
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\bin\Debug\YetAnotherFileFinder.exe
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\bin\Debug\YetAnotherFileFinder.pdb
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\obj\Debug\YetAnotherFileFinder.csprojAssemblyReference.cache
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\obj\Debug\YetAnotherFileFinder.YetAnotherFileFinder.resources
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\obj\Debug\YetAnotherFileFinder.Properties.Resources.resources
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\obj\Debug\YetAnotherFileFinder.csproj.GenerateResource.cache
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\obj\Debug\YetAnotherFileFinder.csproj.CoreCompileInputs.cache
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\obj\Debug\YetAnotherFileFinder.exe
+C:\Users\Senistan.JEGARAJASIN\source\repos\YetAnotherFileFinder\YetAnotherFileFinder\obj\Debug\YetAnotherFileFinder.pdb
