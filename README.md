@@ -1,6 +1,5 @@
 # YAFF
 Yet Another File Finder
-# Student Invaders
 
 ## Introduction
 
@@ -21,4 +20,4 @@ Yet Another File Finder
 ## Authors
 
 * **Senistan Jegarajasingam** - *Project Manager / Developer* - [Seni-J](https://github.com/Seni-J)
-* **Jarod Streckeisen** - *Developer* - [JarodStreck](https://github.com/JarodStreck)
+* **Jarod Streckeisen** - *Project Manager / Developer* - [JarodStreck](https://github.com/JarodStreck)
