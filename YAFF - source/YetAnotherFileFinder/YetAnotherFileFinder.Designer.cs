@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblSelectDriveHeader = new System.Windows.Forms.Label();
             this.lblInfoDrive = new System.Windows.Forms.Label();
             this.lblResearch = new System.Windows.Forms.Label();
@@ -43,12 +42,14 @@
             this.txtKeyWord = new System.Windows.Forms.TextBox();
             this.txtModifDate = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cboExtension = new System.Windows.Forms.ComboBox();
             this.cboSelectDrive = new System.Windows.Forms.ComboBox();
             this.lblSelectDriveText = new System.Windows.Forms.Label();
             this.lvwFiles = new System.Windows.Forms.ListView();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.btnOpenFile = new System.Windows.Forms.Button();
+            this.lblSelectFolderFromDrive = new System.Windows.Forms.Label();
+            this.btnSelectFFD = new System.Windows.Forms.Button();
+            this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -75,7 +76,7 @@
             // 
             this.lblResearch.AutoSize = true;
             this.lblResearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResearch.Location = new System.Drawing.Point(96, 128);
+            this.lblResearch.Location = new System.Drawing.Point(96, 189);
             this.lblResearch.Name = "lblResearch";
             this.lblResearch.Size = new System.Drawing.Size(116, 25);
             this.lblResearch.TabIndex = 2;
@@ -84,7 +85,7 @@
             // lblKeyword
             // 
             this.lblKeyword.AutoSize = true;
-            this.lblKeyword.Location = new System.Drawing.Point(46, 190);
+            this.lblKeyword.Location = new System.Drawing.Point(46, 251);
             this.lblKeyword.Name = "lblKeyword";
             this.lblKeyword.Size = new System.Drawing.Size(48, 13);
             this.lblKeyword.TabIndex = 3;
@@ -93,7 +94,7 @@
             // lblModifDate
             // 
             this.lblModifDate.AutoSize = true;
-            this.lblModifDate.Location = new System.Drawing.Point(46, 234);
+            this.lblModifDate.Location = new System.Drawing.Point(46, 295);
             this.lblModifDate.Name = "lblModifDate";
             this.lblModifDate.Size = new System.Drawing.Size(110, 13);
             this.lblModifDate.TabIndex = 4;
@@ -102,7 +103,7 @@
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(46, 279);
+            this.lblAuthor.Location = new System.Drawing.Point(46, 340);
             this.lblAuthor.Name = "lblAuthor";
             this.lblAuthor.Size = new System.Drawing.Size(44, 13);
             this.lblAuthor.TabIndex = 5;
@@ -111,7 +112,7 @@
             // lblExtension
             // 
             this.lblExtension.AutoSize = true;
-            this.lblExtension.Location = new System.Drawing.Point(49, 322);
+            this.lblExtension.Location = new System.Drawing.Point(49, 383);
             this.lblExtension.Name = "lblExtension";
             this.lblExtension.Size = new System.Drawing.Size(59, 13);
             this.lblExtension.TabIndex = 6;
@@ -121,7 +122,7 @@
             // 
             this.lblFiles.AutoSize = true;
             this.lblFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiles.Location = new System.Drawing.Point(551, 128);
+            this.lblFiles.Location = new System.Drawing.Point(551, 189);
             this.lblFiles.Name = "lblFiles";
             this.lblFiles.Size = new System.Drawing.Size(88, 25);
             this.lblFiles.TabIndex = 7;
@@ -129,7 +130,7 @@
             // 
             // btnResearch
             // 
-            this.btnResearch.Location = new System.Drawing.Point(49, 403);
+            this.btnResearch.Location = new System.Drawing.Point(49, 464);
             this.btnResearch.Name = "btnResearch";
             this.btnResearch.Size = new System.Drawing.Size(75, 23);
             this.btnResearch.TabIndex = 8;
@@ -138,7 +139,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(181, 402);
+            this.btnCancel.Location = new System.Drawing.Point(181, 463);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 9;
@@ -147,7 +148,7 @@
             // 
             // btnRepo
             // 
-            this.btnRepo.Location = new System.Drawing.Point(625, 403);
+            this.btnRepo.Location = new System.Drawing.Point(442, 464);
             this.btnRepo.Name = "btnRepo";
             this.btnRepo.Size = new System.Drawing.Size(138, 23);
             this.btnRepo.TabIndex = 10;
@@ -156,21 +157,21 @@
             // 
             // txtKeyWord
             // 
-            this.txtKeyWord.Location = new System.Drawing.Point(181, 187);
+            this.txtKeyWord.Location = new System.Drawing.Point(181, 248);
             this.txtKeyWord.Name = "txtKeyWord";
             this.txtKeyWord.Size = new System.Drawing.Size(100, 20);
             this.txtKeyWord.TabIndex = 11;
             // 
             // txtModifDate
             // 
-            this.txtModifDate.Location = new System.Drawing.Point(181, 231);
+            this.txtModifDate.Location = new System.Drawing.Point(181, 292);
             this.txtModifDate.Name = "txtModifDate";
             this.txtModifDate.Size = new System.Drawing.Size(100, 20);
             this.txtModifDate.TabIndex = 12;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(181, 276);
+            this.txtAuthor.Location = new System.Drawing.Point(181, 337);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(100, 20);
             this.txtAuthor.TabIndex = 13;
@@ -185,7 +186,7 @@
             ".docx",
             ".pdf",
             ".xlsx"});
-            this.cboExtension.Location = new System.Drawing.Point(181, 319);
+            this.cboExtension.Location = new System.Drawing.Point(181, 380);
             this.cboExtension.Name = "cboExtension";
             this.cboExtension.Size = new System.Drawing.Size(100, 21);
             this.cboExtension.TabIndex = 15;
@@ -193,15 +194,15 @@
             // cboSelectDrive
             // 
             this.cboSelectDrive.FormattingEnabled = true;
-            this.cboSelectDrive.Location = new System.Drawing.Point(181, 64);
+            this.cboSelectDrive.Location = new System.Drawing.Point(210, 72);
             this.cboSelectDrive.Name = "cboSelectDrive";
-            this.cboSelectDrive.Size = new System.Drawing.Size(100, 21);
+            this.cboSelectDrive.Size = new System.Drawing.Size(71, 21);
             this.cboSelectDrive.TabIndex = 16;
             // 
             // lblSelectDriveText
             // 
             this.lblSelectDriveText.AutoSize = true;
-            this.lblSelectDriveText.Location = new System.Drawing.Point(46, 67);
+            this.lblSelectDriveText.Location = new System.Drawing.Point(46, 72);
             this.lblSelectDriveText.Name = "lblSelectDriveText";
             this.lblSelectDriveText.Size = new System.Drawing.Size(106, 13);
             this.lblSelectDriveText.TabIndex = 17;
@@ -209,17 +210,47 @@
             // 
             // lvwFiles
             // 
-            this.lvwFiles.Location = new System.Drawing.Point(442, 156);
+            this.lvwFiles.Location = new System.Drawing.Point(442, 217);
             this.lvwFiles.Name = "lvwFiles";
             this.lvwFiles.Size = new System.Drawing.Size(321, 227);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
             // 
+            // btnOpenFile
+            // 
+            this.btnOpenFile.Location = new System.Drawing.Point(625, 463);
+            this.btnOpenFile.Name = "btnOpenFile";
+            this.btnOpenFile.Size = new System.Drawing.Size(138, 23);
+            this.btnOpenFile.TabIndex = 19;
+            this.btnOpenFile.Text = "Ouvrir le fichier";
+            this.btnOpenFile.UseVisualStyleBackColor = true;
+            // 
+            // lblSelectFolderFromDrive
+            // 
+            this.lblSelectFolderFromDrive.AutoSize = true;
+            this.lblSelectFolderFromDrive.Location = new System.Drawing.Point(78, 115);
+            this.lblSelectFolderFromDrive.Name = "lblSelectFolderFromDrive";
+            this.lblSelectFolderFromDrive.Size = new System.Drawing.Size(134, 13);
+            this.lblSelectFolderFromDrive.TabIndex = 20;
+            this.lblSelectFolderFromDrive.Text = "Sélectionner un répertoire :";
+            // 
+            // btnSelectFFD
+            // 
+            this.btnSelectFFD.Location = new System.Drawing.Point(112, 142);
+            this.btnSelectFFD.Name = "btnSelectFFD";
+            this.btnSelectFFD.Size = new System.Drawing.Size(100, 23);
+            this.btnSelectFFD.TabIndex = 21;
+            this.btnSelectFFD.Text = "Sélectionner...";
+            this.btnSelectFFD.UseVisualStyleBackColor = true;
+            // 
             // YetAnotherFileFinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 460);
+            this.ClientSize = new System.Drawing.Size(817, 515);
+            this.Controls.Add(this.btnSelectFFD);
+            this.Controls.Add(this.lblSelectFolderFromDrive);
+            this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.lvwFiles);
             this.Controls.Add(this.lblSelectDriveText);
             this.Controls.Add(this.cboSelectDrive);
@@ -243,7 +274,6 @@
             this.Name = "YetAnotherFileFinder";
             this.Text = "YAFF - Yet Another File Finder";
             this.Load += new System.EventHandler(this.YetAnotherFileFinder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,11 +295,14 @@
         private System.Windows.Forms.TextBox txtKeyWord;
         private System.Windows.Forms.TextBox txtModifDate;
         private System.Windows.Forms.TextBox txtAuthor;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ComboBox cboExtension;
         private System.Windows.Forms.ComboBox cboSelectDrive;
         private System.Windows.Forms.Label lblSelectDriveText;
         private System.Windows.Forms.ListView lvwFiles;
+        private System.Windows.Forms.Button btnOpenFile;
+        private System.Windows.Forms.Label lblSelectFolderFromDrive;
+        private System.Windows.Forms.Button btnSelectFFD;
+        private System.Windows.Forms.FolderBrowserDialog fbdFolderLookup;
     }
 }
 
