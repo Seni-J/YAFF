@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace YetAnotherFileFinder
@@ -19,7 +20,8 @@ namespace YetAnotherFileFinder
 
         private void YetAnotherFileFinder_Load(object sender, EventArgs e)
         {
-
+            Class.Drives drive = new Class.Drives();
+            drive.LoadDrive(this);
         }
     }
 }
