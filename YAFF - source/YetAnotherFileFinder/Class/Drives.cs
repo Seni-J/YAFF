@@ -36,8 +36,8 @@ namespace YetAnotherFileFinder.Class
             }
         }
 
-        public void ShowDrive(){
-
-        }
+        public void LoadFolders(string selectedPath){
+            Directory.GetDirectories(selectedPath);
+        }   
     }
 }

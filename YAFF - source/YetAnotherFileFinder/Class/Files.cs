@@ -18,7 +18,7 @@ namespace YetAnotherFileFinder.Class
     class Files
     {
         public void GetFiles(){
-
+ 
         }
 
         public void ShowResults(){

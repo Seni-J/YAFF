@@ -242,6 +242,7 @@
             this.btnSelectFFD.TabIndex = 21;
             this.btnSelectFFD.Text = "Sélectionner...";
             this.btnSelectFFD.UseVisualStyleBackColor = true;
+            this.btnSelectFFD.Click += new System.EventHandler(this.btnSelectFFD_Click);
             // 
             // YetAnotherFileFinder
             // 
