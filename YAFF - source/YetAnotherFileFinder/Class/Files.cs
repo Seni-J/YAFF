@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 /*
  * CHANGER
@@ -17,7 +18,7 @@ namespace YetAnotherFileFinder.Class
     class Files
     {
         public void GetFiles(){
-
+ 
         }
 
         public void ShowResults(){

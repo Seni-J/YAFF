@@ -242,6 +242,7 @@
             this.btnSelectFFD.TabIndex = 21;
             this.btnSelectFFD.Text = "Sélectionner...";
             this.btnSelectFFD.UseVisualStyleBackColor = true;
+            this.btnSelectFFD.Click += new System.EventHandler(this.btnSelectFFD_Click);
             // 
             // YetAnotherFileFinder
             // 
@@ -296,13 +297,13 @@
         private System.Windows.Forms.TextBox txtModifDate;
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.ComboBox cboExtension;
-        private System.Windows.Forms.ComboBox cboSelectDrive;
         private System.Windows.Forms.Label lblSelectDriveText;
         private System.Windows.Forms.ListView lvwFiles;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Label lblSelectFolderFromDrive;
-        private System.Windows.Forms.Button btnSelectFFD;
         private System.Windows.Forms.FolderBrowserDialog fbdFolderLookup;
+        public System.Windows.Forms.ComboBox cboSelectDrive;
+        public System.Windows.Forms.Button btnSelectFFD;
     }
 }
 
