@@ -17,8 +17,8 @@ namespace YetAnotherFileFinder.Class
 {
     class Files
     {
-        public void GetFiles(){
- 
+        public void GetFilesFromSelectedDrive(string selectedFolder){
+            string[] filePaths = Directory.GetFiles(@selectedFolder,"*",SearchOption.AllDirectories);
         }
 
         public void ShowResults(){

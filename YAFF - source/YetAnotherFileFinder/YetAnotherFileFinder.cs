@@ -14,6 +14,9 @@ namespace YetAnotherFileFinder
     public partial class YetAnotherFileFinder : Form
     {
         Class.Drives drive = new Class.Drives();
+        Class.Files file = new Class.Files();
+
+        string selectedFolder;
 
         public YetAnotherFileFinder()
         {
@@ -27,10 +30,12 @@ namespace YetAnotherFileFinder
 
         private void btnSelectFFD_Click(object sender, EventArgs e)
         {
-            if(cboSelectDrive.SelectedIndex > -1)
-            {
-                drive.LoadFolders(cboSelectDrive.ToString());
-            }
+
+        }
+
+        private void btnResearch_Click(object sender, EventArgs e)
+        {
+            file.GetFilesFromSelectedDrive(selectedFolder);
         }
     }
 }

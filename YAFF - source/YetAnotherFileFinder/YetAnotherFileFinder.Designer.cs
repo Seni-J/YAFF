@@ -136,6 +136,7 @@
             this.btnResearch.TabIndex = 8;
             this.btnResearch.Text = "Rechercher";
             this.btnResearch.UseVisualStyleBackColor = true;
+            this.btnResearch.Click += new System.EventHandler(this.btnResearch_Click);
             // 
             // btnCancel
             // 
