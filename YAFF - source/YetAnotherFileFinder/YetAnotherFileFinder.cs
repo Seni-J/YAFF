@@ -16,6 +16,8 @@ namespace YetAnotherFileFinder
         Class.Drives drive = new Class.Drives();
         public string selectedDrive;
 
+        string selectedFolder;
+
         public YetAnotherFileFinder()
         {
             InitializeComponent();
@@ -33,16 +35,9 @@ namespace YetAnotherFileFinder
             {
                 selectedDrive = cboSelectDrive.SelectedItem.ToString();
                 frmFolder frm2 = new frmFolder();
-                frm2.LoadFolder(selectedDrive);
+                frm2.LoadFolders(selectedDrive);
                 frm2.ShowDialog();
-                
-
             }
-
-
-            
         }
-        
-
     }
 }
