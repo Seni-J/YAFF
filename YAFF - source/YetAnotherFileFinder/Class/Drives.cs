@@ -38,6 +38,10 @@ namespace YetAnotherFileFinder.Class
 
         public void LoadFolders(string selectedPath){
             Directory.GetDirectories(selectedPath);
-        }   
+        }
+        public void LoadFoldersFromSelectedDrive(string selectedDrive)
+        {
+            
+        }
     }
 }
