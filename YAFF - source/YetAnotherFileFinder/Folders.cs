@@ -43,5 +43,6 @@ namespace YetAnotherFileFinder
             
             return directoryNode;
         }
+        //selectedFolder = tvFolder.SelectedNode.Text;
     }
 }
