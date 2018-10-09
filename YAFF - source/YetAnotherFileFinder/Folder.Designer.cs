@@ -29,20 +29,32 @@
         private void InitializeComponent()
         {
             this.tvFolder = new System.Windows.Forms.TreeView();
+            this.btnSelectFolder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tvFolder
             // 
             this.tvFolder.Location = new System.Drawing.Point(3, 1);
             this.tvFolder.Name = "tvFolder";
-            this.tvFolder.Size = new System.Drawing.Size(279, 449);
+            this.tvFolder.Size = new System.Drawing.Size(279, 413);
             this.tvFolder.TabIndex = 23;
+            // 
+            // btnSelectFolder
+            // 
+            this.btnSelectFolder.Location = new System.Drawing.Point(107, 420);
+            this.btnSelectFolder.Name = "btnSelectFolder";
+            this.btnSelectFolder.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectFolder.TabIndex = 24;
+            this.btnSelectFolder.Text = "Select folder";
+            this.btnSelectFolder.UseVisualStyleBackColor = true;
+            this.btnSelectFolder.Click += new System.EventHandler(this.btnSelectFolder_Click_1);
             // 
             // frmFolder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(285, 450);
+            this.Controls.Add(this.btnSelectFolder);
             this.Controls.Add(this.tvFolder);
             this.Name = "frmFolder";
             this.Text = "Folders";
@@ -54,5 +66,6 @@
         #endregion
 
         private System.Windows.Forms.TreeView tvFolder;
+        private System.Windows.Forms.Button btnSelectFolder;
     }
 }

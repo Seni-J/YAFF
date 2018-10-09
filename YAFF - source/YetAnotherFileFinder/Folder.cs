@@ -13,6 +13,7 @@ namespace YetAnotherFileFinder
 {
     public partial class frmFolder : Form
     {
+        public string selectedFolder;
         public frmFolder()
         {
             InitializeComponent();
@@ -26,21 +27,28 @@ namespace YetAnotherFileFinder
         public void LoadFolder(string selectedDrive)
         {
             ListDirectory(tvFolder, selectedDrive);
+            
         }
-        private void ListDirectory(TreeView treeView, string path)
+        public void ListDirectory(TreeView treeView, string path)
         {
             treeView.Nodes.Clear();
             var rootDirectoryInfo = new DirectoryInfo(path);
             treeView.Nodes.Add(CreateDirectoryNode(rootDirectoryInfo));
         }
 
-        private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
+        public static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
             var directoryNode = new TreeNode(directoryInfo.Name);
             foreach (var directory in directoryInfo.GetDirectories())
                 directoryNode.Nodes.Add(CreateDirectoryNode(directory));
             
             return directoryNode;
+        }
+
+        private void btnSelectFolder_Click_1(object sender, EventArgs e)
+        {
+            selectedFolder = tvFolder.SelectedNode.Text;
+            Application.Exit();
         }
     }
 }
