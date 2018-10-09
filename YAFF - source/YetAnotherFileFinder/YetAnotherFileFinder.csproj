@@ -49,6 +49,12 @@
     <Compile Include="Class\Drives.cs" />
     <Compile Include="Class\Files.cs" />
     <Compile Include="Class\Filters.cs" />
+    <Compile Include="Folder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folder.Designer.cs">
+      <DependentUpon>Folder.cs</DependentUpon>
+    </Compile>
     <Compile Include="YetAnotherFileFinder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Folder.resx">
+      <DependentUpon>Folder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YetAnotherFileFinder.resx">
       <DependentUpon>YetAnotherFileFinder.cs</DependentUpon>
     </EmbeddedResource>
