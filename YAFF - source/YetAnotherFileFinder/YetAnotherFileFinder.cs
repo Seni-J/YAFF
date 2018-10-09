@@ -35,16 +35,9 @@ namespace YetAnotherFileFinder
             {
                 selectedDrive = cboSelectDrive.SelectedItem.ToString();
                 frmFolder frm2 = new frmFolder();
-                frm2.LoadFolder(selectedDrive);
+                frm2.LoadFolders(selectedDrive);
                 frm2.ShowDialog();
-                
-
             }
-
-
-            
         }
-        
-
     }
 }

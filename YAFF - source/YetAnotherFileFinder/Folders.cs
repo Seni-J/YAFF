@@ -23,10 +23,11 @@ namespace YetAnotherFileFinder
         {
             
         }
-        public void LoadFolder(string selectedDrive)
+        public void LoadFolders(string selectedDrive)
         {
             ListDirectory(tvFolder, selectedDrive);
         }
+
         private void ListDirectory(TreeView treeView, string path)
         {
             treeView.Nodes.Clear();
