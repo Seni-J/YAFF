@@ -56,6 +56,7 @@
             this.ClientSize = new System.Drawing.Size(285, 450);
             this.Controls.Add(this.btnSelectFolder);
             this.Controls.Add(this.tvFolder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmFolder";
             this.Text = "Folders";
             this.Load += new System.EventHandler(this.Folder_Load);
