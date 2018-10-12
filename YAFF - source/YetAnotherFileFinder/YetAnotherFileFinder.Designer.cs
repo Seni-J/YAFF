@@ -51,6 +51,9 @@
             this.btnSelectFFD = new System.Windows.Forms.Button();
             this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
+            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -211,11 +214,16 @@
             // 
             // lvwFiles
             // 
+            this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Name,
+            this.size,
+            this.Author});
             this.lvwFiles.Location = new System.Drawing.Point(442, 217);
             this.lvwFiles.Name = "lvwFiles";
             this.lvwFiles.Size = new System.Drawing.Size(321, 227);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
+            this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
             // 
             // btnOpenFile
             // 
@@ -254,6 +262,10 @@
             this.button1.Text = "Debug Button";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Name
+            // 
+            this.Name.Text = "Nom";
             // 
             // YetAnotherFileFinder
             // 
@@ -317,6 +329,9 @@
         public System.Windows.Forms.ComboBox cboSelectDrive;
         public System.Windows.Forms.Button btnSelectFFD;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader Name;
+        private System.Windows.Forms.ColumnHeader size;
+        private System.Windows.Forms.ColumnHeader Author;
     }
 }
 

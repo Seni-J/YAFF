@@ -13,7 +13,9 @@ namespace YetAnotherFileFinder
 {
     public partial class frmFolder : Form
     {
-
+        public string selectedDriveToForm;
+        public YetAnotherFileFinder yaffForm;
+        Class.Files file = new Class.Files();
         public string SelectedFolder { get; set; }
 
         public frmFolder()
@@ -31,11 +33,18 @@ namespace YetAnotherFileFinder
         {
             SelectedFolder = tvFolder.SelectedNode.Text;
             this.Close();
+            string finalPath = selectedDriveToForm + SelectedFolder;
+            file.GetFilesFromSelectedDrive(yaffForm, finalPath);
+
+
         }
 
         public void LoadFolders(string selectedDrive)
         {
             ListDirectory(tvFolder, selectedDrive);
+            selectedDriveToForm = selectedDrive;
+
+
         }
 
         private void ListDirectory(TreeView treeView, string path)
@@ -50,7 +59,7 @@ namespace YetAnotherFileFinder
             var directoryNode = new TreeNode(directoryInfo.Name);
             foreach (var directory in directoryInfo.GetDirectories())
                 directoryNode.Nodes.Add(CreateDirectoryNode(directory));
-
+           
             return directoryNode;
         }
 

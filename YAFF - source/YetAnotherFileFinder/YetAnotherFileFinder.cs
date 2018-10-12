@@ -42,5 +42,10 @@ namespace YetAnotherFileFinder
         {
             MessageBox.Show(frm2.SelectedFolder);
         }
+
+        public void lvwFiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
