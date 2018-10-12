@@ -46,14 +46,14 @@
             this.cboSelectDrive = new System.Windows.Forms.ComboBox();
             this.lblSelectDriveText = new System.Windows.Forms.Label();
             this.lvwFiles = new System.Windows.Forms.ListView();
+            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.lblSelectFolderFromDrive = new System.Windows.Forms.Label();
             this.btnSelectFFD = new System.Windows.Forms.Button();
             this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -225,6 +225,10 @@
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
             this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
             // 
+            // Name
+            // 
+            this.Name.Text = "Nom";
+            // 
             // btnOpenFile
             // 
             this.btnOpenFile.Location = new System.Drawing.Point(625, 463);
@@ -263,10 +267,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Name
-            // 
-            this.Name.Text = "Nom";
-            // 
             // YetAnotherFileFinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,7 +296,7 @@
             this.Controls.Add(this.lblSelectDriveHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "YetAnotherFileFinder";
+            this.Name.Name = "YetAnotherFileFinder";
             this.Text = "YAFF - Yet Another File Finder";
             this.Load += new System.EventHandler(this.YetAnotherFileFinder_Load);
             this.ResumeLayout(false);
@@ -322,7 +322,6 @@
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.ComboBox cboExtension;
         private System.Windows.Forms.Label lblSelectDriveText;
-        private System.Windows.Forms.ListView lvwFiles;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Label lblSelectFolderFromDrive;
         private System.Windows.Forms.FolderBrowserDialog fbdFolderLookup;
@@ -332,6 +331,7 @@
         private System.Windows.Forms.ColumnHeader Name;
         private System.Windows.Forms.ColumnHeader size;
         private System.Windows.Forms.ColumnHeader Author;
+        public System.Windows.Forms.ListView lvwFiles;
     }
 }
 
