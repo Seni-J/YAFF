@@ -122,7 +122,7 @@
             // 
             this.lblFiles.AutoSize = true;
             this.lblFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiles.Location = new System.Drawing.Point(551, 189);
+            this.lblFiles.Location = new System.Drawing.Point(492, 189);
             this.lblFiles.Name = "lblFiles";
             this.lblFiles.Size = new System.Drawing.Size(88, 25);
             this.lblFiles.TabIndex = 7;
@@ -196,9 +196,9 @@
             this.lvwFiles.BackgroundImageTiled = true;
             this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.FileName});
-            this.lvwFiles.Location = new System.Drawing.Point(442, 217);
+            this.lvwFiles.Location = new System.Drawing.Point(314, 217);
             this.lvwFiles.Name = "lvwFiles";
-            this.lvwFiles.Size = new System.Drawing.Size(321, 227);
+            this.lvwFiles.Size = new System.Drawing.Size(449, 227);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
             this.lvwFiles.View = System.Windows.Forms.View.Details;
