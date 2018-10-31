@@ -200,7 +200,6 @@
             this.lvwFiles.Size = new System.Drawing.Size(321, 227);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
-
             // 
             // btnOpenFile
             // 
@@ -229,9 +228,6 @@
             this.btnSelectFFD.Text = "Sélectionner...";
             this.btnSelectFFD.UseVisualStyleBackColor = true;
             this.btnSelectFFD.Click += new System.EventHandler(this.btnSelectFFD_Click);
-            // 
-            // fbdFolderLookup
-            // 
             // 
             // button1
             // 

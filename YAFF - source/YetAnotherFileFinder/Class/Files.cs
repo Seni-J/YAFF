@@ -29,7 +29,7 @@ namespace YetAnotherFileFinder.Class
             foreach (FileInfo file in Files)
             {
                 str = str + ", " + file.Name;
-                ListViewItem lvi = new ListViewItem();
+                ListViewItem lvi = new ListViewItem(str);
                 lvi.Text = file.Name;
                 lvi.SubItems.Add(file.Name);
                 //lvi.SubItems.Add(file.Name);

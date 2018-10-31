@@ -14,6 +14,7 @@ namespace YetAnotherFileFinder
     public partial class YetAnotherFileFinder : Form
     {
         Class.Drives drive = new Class.Drives();
+        Class.Files file = new Class.Files();
         
         public string selectedDrive;
 
@@ -31,7 +32,7 @@ namespace YetAnotherFileFinder
         {
             fbdFolderLookup.ShowDialog();
             selectedDrive = fbdFolderLookup.SelectedPath;
-
+            file.GetFilesFromSelectedDrive(this, selectedDrive);
 
         }
 
