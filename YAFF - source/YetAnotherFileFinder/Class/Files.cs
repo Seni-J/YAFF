@@ -28,10 +28,9 @@ namespace YetAnotherFileFinder.Class
             string str = "";
             foreach (FileInfo file in Files)
             {
-                str = str + ", " + file.Name;
-                ListViewItem lvi = new ListViewItem(str);
+                
+                ListViewItem lvi = new ListViewItem();
                 lvi.Text = file.Name;
-                lvi.SubItems.Add(file.Name);
                 //lvi.SubItems.Add(file.Name);
                 yaffParentForm.lvwFiles.Items.Add(lvi);
                
