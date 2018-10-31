@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Windows.Forms;
 
 /*
  * CHANGER
@@ -29,7 +28,7 @@ namespace YetAnotherFileFinder.Class
             foreach (FileInfo file in Files)
             {
                 str = str + ", " + file.Name;
-                ListViewItem lvi = new ListViewItem();
+                ListViewItem lvi = new ListViewItem(str);
                 lvi.Text = file.Name;
                 lvi.SubItems.Add(file.Name);
                 //lvi.SubItems.Add(file.Name);
@@ -37,7 +36,7 @@ namespace YetAnotherFileFinder.Class
                
             }
         }
-       
+
         public void ShowResults(){
         }
 
