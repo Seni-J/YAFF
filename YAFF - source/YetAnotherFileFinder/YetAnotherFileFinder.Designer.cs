@@ -295,10 +295,6 @@
         private System.Windows.Forms.Button btnResearch;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnRepo;
-        private System.Windows.Forms.TextBox txtKeyWord;
-        private System.Windows.Forms.TextBox txtModifDate;
-        private System.Windows.Forms.TextBox txtAuthor;
-        private System.Windows.Forms.ComboBox cboExtension;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Label lblSelectFolderFromDrive;
         private System.Windows.Forms.FolderBrowserDialog fbdFolderLookup;
@@ -306,6 +302,10 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListView lvwFiles;
         private System.Windows.Forms.ColumnHeader FileName;
+        public System.Windows.Forms.TextBox txtKeyWord;
+        public System.Windows.Forms.TextBox txtModifDate;
+        public System.Windows.Forms.TextBox txtAuthor;
+        public System.Windows.Forms.ComboBox cboExtension;
     }
 }
 
