@@ -29,15 +29,11 @@ namespace YetAnotherFileFinder.Class
         private YetAnotherFileFinder yaffDrive;
 
         public void LoadDrive(YetAnotherFileFinder yaffParentForm){
-            foreach(DriveInfo driveInfo in DriveInfo.GetDrives())
-            {
-                yaffDrive = yaffParentForm;
-                yaffDrive.cboSelectDrive.Items.Add(driveInfo);
-            }
+           
         }
 
         public void LoadFolders(string selectedPath){
-            Directory.GetDirectories(selectedPath);
+           
         }
         public void LoadFoldersFromSelectedDrive(string selectedDrive)
         {
