@@ -16,8 +16,19 @@ namespace YetAnotherFileFinder.Class
 {
     class Filters
     {
-        public void CheckFilter(){
+        private YetAnotherFileFinder yaffFilter;
 
+        public void Load(YetAnotherFileFinder yetAnotherParentForm)
+        {
+            yaffFilter = yetAnotherParentForm;
+            CheckFilter();
+        }
+
+        public void CheckFilter(){
+            if (!string.IsNullOrEmpty(yaffFilter.txtKeyWord.Text))
+            {
+
+            }
         }
 
         public void SetFilter(){

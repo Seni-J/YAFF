@@ -42,5 +42,10 @@ namespace YetAnotherFileFinder
         {
             MessageBox.Show(frm2.SelectedFolder);
         }
+
+        private void btnResearch_Click(object sender, EventArgs e)
+        {
+            //use filters methods
+        }
     }
 }
