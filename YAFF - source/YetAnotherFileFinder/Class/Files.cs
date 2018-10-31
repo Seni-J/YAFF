@@ -17,6 +17,7 @@ namespace YetAnotherFileFinder.Class
 {
     class Files
     {
+<<<<<<< HEAD
         
         protected string finalPath;
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
@@ -35,6 +36,10 @@ namespace YetAnotherFileFinder.Class
                 yaffParentForm.lvwFiles.Items.Add(lvi);
                
             }
+=======
+        public void GetFilesFromSelectedDrive(string selectedFolder){
+            string[] filePaths = Directory.GetFiles(@selectedFolder,"*",SearchOption.AllDirectories);
+>>>>>>> parent of b5f96d8... Revert "Revert "Merge remote-tracking branch 'origin/Dev-Jarod' into Dev-Jarod""
         }
 
         public void ShowResults(){
