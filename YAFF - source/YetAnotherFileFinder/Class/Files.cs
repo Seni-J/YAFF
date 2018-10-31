@@ -28,10 +28,14 @@ namespace YetAnotherFileFinder.Class
             string str = "";
             foreach (FileInfo file in Files)
             {
-                
+                var lastModified = System.IO.File.GetLastWriteTime(path + "/" + file.Name);
+                string user = System.IO.File.GetAccessControl(path + "/" + file.Name).GetOwner(typeof(System.Security.Principal.NTAccount)).ToString();
                 ListViewItem lvi = new ListViewItem();
-                
                 lvi.Text = file.Name;
+                lvi.SubItems.Add(file.Length.ToString() + " octet ");
+                lvi.SubItems.Add(user.ToString());
+                lvi.SubItems.Add(lastModified.ToString());
+                
                 //lvi.SubItems.Add(file.Name);
                 yaffParentForm.lvwFiles.Items.Add(lvi);
                

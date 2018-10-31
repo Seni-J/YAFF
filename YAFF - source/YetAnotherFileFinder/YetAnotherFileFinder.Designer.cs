@@ -50,6 +50,9 @@
             this.btnSelectFFD = new System.Windows.Forms.Button();
             this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
+            this.Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lastModification = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -195,8 +198,11 @@
             // 
             this.lvwFiles.BackgroundImageTiled = true;
             this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.FileName});
-            this.lvwFiles.Location = new System.Drawing.Point(314, 217);
+            this.FileName,
+            this.Size,
+            this.Author,
+            this.lastModification});
+            this.lvwFiles.Location = new System.Drawing.Point(328, 174);
             this.lvwFiles.Name = "lvwFiles";
             this.lvwFiles.Size = new System.Drawing.Size(449, 227);
             this.lvwFiles.TabIndex = 18;
@@ -207,7 +213,7 @@
             // FileName
             // 
             this.FileName.Text = "Name";
-            this.FileName.Width = 150;
+            this.FileName.Width = 100;
             // 
             // btnOpenFile
             // 
@@ -246,6 +252,22 @@
             this.button1.Text = "Debug Button";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Size
+            // 
+            this.Size.Text = "Size";
+            this.Size.Width = 75;
+            // 
+            // lastModification
+            // 
+            this.lastModification.DisplayIndex = 2;
+            this.lastModification.Text = "Modifier le ";
+            this.lastModification.Width = 64;
+            // 
+            // Author
+            // 
+            this.Author.DisplayIndex = 3;
+            this.Author.Text = "Auteur";
             // 
             // YetAnotherFileFinder
             // 
@@ -306,6 +328,9 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListView lvwFiles;
         private System.Windows.Forms.ColumnHeader FileName;
+        private System.Windows.Forms.ColumnHeader Size;
+        private System.Windows.Forms.ColumnHeader lastModification;
+        private System.Windows.Forms.ColumnHeader Author;
     }
 }
 
