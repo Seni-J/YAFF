@@ -193,6 +193,7 @@
             // 
             // lvwFiles
             // 
+            this.lvwFiles.BackgroundImageTiled = true;
             this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.FileName});
             this.lvwFiles.Location = new System.Drawing.Point(442, 217);
@@ -200,6 +201,13 @@
             this.lvwFiles.Size = new System.Drawing.Size(321, 227);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
+            this.lvwFiles.View = System.Windows.Forms.View.Details;
+            this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
+            // 
+            // FileName
+            // 
+            this.FileName.Text = "Name";
+            this.FileName.Width = 150;
             // 
             // btnOpenFile
             // 

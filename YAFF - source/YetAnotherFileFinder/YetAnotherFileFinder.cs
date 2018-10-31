@@ -41,6 +41,9 @@ namespace YetAnotherFileFinder
             MessageBox.Show(selectedDrive);
         }
 
+        private void lvwFiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

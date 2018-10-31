@@ -30,6 +30,7 @@ namespace YetAnotherFileFinder.Class
             {
                 
                 ListViewItem lvi = new ListViewItem();
+                
                 lvi.Text = file.Name;
                 //lvi.SubItems.Add(file.Name);
                 yaffParentForm.lvwFiles.Items.Add(lvi);
