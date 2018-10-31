@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 /*
  * CHANGER
@@ -17,7 +18,6 @@ namespace YetAnotherFileFinder.Class
 {
     class Files
     {
-<<<<<<< HEAD
         
         protected string finalPath;
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
@@ -28,20 +28,16 @@ namespace YetAnotherFileFinder.Class
             string str = "";
             foreach (FileInfo file in Files)
             {
-                str = str + ", " + file.Name;
-                ListViewItem lvi = new ListViewItem(str);
+                
+                ListViewItem lvi = new ListViewItem();
+                
                 lvi.Text = file.Name;
-                lvi.SubItems.Add(file.Name);
                 //lvi.SubItems.Add(file.Name);
                 yaffParentForm.lvwFiles.Items.Add(lvi);
                
             }
-=======
-        public void GetFilesFromSelectedDrive(string selectedFolder){
-            string[] filePaths = Directory.GetFiles(@selectedFolder,"*",SearchOption.AllDirectories);
->>>>>>> parent of b5f96d8... Revert "Revert "Merge remote-tracking branch 'origin/Dev-Jarod' into Dev-Jarod""
         }
-
+       
         public void ShowResults(){
         }
 

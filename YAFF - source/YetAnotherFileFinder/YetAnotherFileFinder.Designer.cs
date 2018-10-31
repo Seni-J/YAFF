@@ -43,9 +43,8 @@
             this.txtModifDate = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.cboExtension = new System.Windows.Forms.ComboBox();
-            this.cboSelectDrive = new System.Windows.Forms.ComboBox();
-            this.lblSelectDriveText = new System.Windows.Forms.Label();
             this.lvwFiles = new System.Windows.Forms.ListView();
+            this.FileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.lblSelectFolderFromDrive = new System.Windows.Forms.Label();
             this.btnSelectFFD = new System.Windows.Forms.Button();
@@ -137,7 +136,6 @@
             this.btnResearch.TabIndex = 8;
             this.btnResearch.Text = "Rechercher";
             this.btnResearch.UseVisualStyleBackColor = true;
-            this.btnResearch.Click += new System.EventHandler(this.btnResearch_Click);
             // 
             // btnCancel
             // 
@@ -193,30 +191,23 @@
             this.cboExtension.Size = new System.Drawing.Size(100, 21);
             this.cboExtension.TabIndex = 15;
             // 
-            // cboSelectDrive
-            // 
-            this.cboSelectDrive.FormattingEnabled = true;
-            this.cboSelectDrive.Location = new System.Drawing.Point(210, 72);
-            this.cboSelectDrive.Name = "cboSelectDrive";
-            this.cboSelectDrive.Size = new System.Drawing.Size(71, 21);
-            this.cboSelectDrive.TabIndex = 16;
-            // 
-            // lblSelectDriveText
-            // 
-            this.lblSelectDriveText.AutoSize = true;
-            this.lblSelectDriveText.Location = new System.Drawing.Point(46, 72);
-            this.lblSelectDriveText.Name = "lblSelectDriveText";
-            this.lblSelectDriveText.Size = new System.Drawing.Size(106, 13);
-            this.lblSelectDriveText.TabIndex = 17;
-            this.lblSelectDriveText.Text = "Lecteur sélectionné :";
-            // 
             // lvwFiles
             // 
+            this.lvwFiles.BackgroundImageTiled = true;
+            this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FileName});
             this.lvwFiles.Location = new System.Drawing.Point(442, 217);
             this.lvwFiles.Name = "lvwFiles";
             this.lvwFiles.Size = new System.Drawing.Size(321, 227);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
+            this.lvwFiles.View = System.Windows.Forms.View.Details;
+            this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
+            // 
+            // FileName
+            // 
+            this.FileName.Text = "Name";
+            this.FileName.Width = 150;
             // 
             // btnOpenFile
             // 
@@ -230,7 +221,7 @@
             // lblSelectFolderFromDrive
             // 
             this.lblSelectFolderFromDrive.AutoSize = true;
-            this.lblSelectFolderFromDrive.Location = new System.Drawing.Point(78, 115);
+            this.lblSelectFolderFromDrive.Location = new System.Drawing.Point(98, 71);
             this.lblSelectFolderFromDrive.Name = "lblSelectFolderFromDrive";
             this.lblSelectFolderFromDrive.Size = new System.Drawing.Size(134, 13);
             this.lblSelectFolderFromDrive.TabIndex = 20;
@@ -238,7 +229,7 @@
             // 
             // btnSelectFFD
             // 
-            this.btnSelectFFD.Location = new System.Drawing.Point(112, 142);
+            this.btnSelectFFD.Location = new System.Drawing.Point(112, 100);
             this.btnSelectFFD.Name = "btnSelectFFD";
             this.btnSelectFFD.Size = new System.Drawing.Size(100, 23);
             this.btnSelectFFD.TabIndex = 21;
@@ -266,8 +257,6 @@
             this.Controls.Add(this.lblSelectFolderFromDrive);
             this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.lvwFiles);
-            this.Controls.Add(this.lblSelectDriveText);
-            this.Controls.Add(this.cboSelectDrive);
             this.Controls.Add(this.cboExtension);
             this.Controls.Add(this.txtAuthor);
             this.Controls.Add(this.txtModifDate);
@@ -303,21 +292,20 @@
         private System.Windows.Forms.Label lblAuthor;
         private System.Windows.Forms.Label lblExtension;
         private System.Windows.Forms.Label lblFiles;
+        private System.Windows.Forms.Button btnResearch;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnRepo;
-        private System.Windows.Forms.Label lblSelectDriveText;
-        private System.Windows.Forms.ListView lvwFiles;
+        private System.Windows.Forms.TextBox txtKeyWord;
+        private System.Windows.Forms.TextBox txtModifDate;
+        private System.Windows.Forms.TextBox txtAuthor;
+        private System.Windows.Forms.ComboBox cboExtension;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Label lblSelectFolderFromDrive;
         private System.Windows.Forms.FolderBrowserDialog fbdFolderLookup;
-        public System.Windows.Forms.ComboBox cboSelectDrive;
         public System.Windows.Forms.Button btnSelectFFD;
         private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button btnResearch;
-        public System.Windows.Forms.TextBox txtKeyWord;
-        public System.Windows.Forms.TextBox txtModifDate;
-        public System.Windows.Forms.TextBox txtAuthor;
-        public System.Windows.Forms.ComboBox cboExtension;
+        public System.Windows.Forms.ListView lvwFiles;
+        private System.Windows.Forms.ColumnHeader FileName;
     }
 }
 

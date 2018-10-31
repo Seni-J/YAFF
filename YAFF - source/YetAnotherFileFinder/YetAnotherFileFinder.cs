@@ -25,7 +25,7 @@ namespace YetAnotherFileFinder
 
         private void YetAnotherFileFinder_Load(object sender, EventArgs e)
         {
-            drive.LoadDrive(this);
+           
         }
 
         public void btnSelectFFD_Click(object sender, EventArgs e)
@@ -38,12 +38,12 @@ namespace YetAnotherFileFinder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(frm2.SelectedFolder);
+            MessageBox.Show(selectedDrive);
         }
 
-        private void btnResearch_Click(object sender, EventArgs e)
+        private void lvwFiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //use filters methods
+
         }
     }
 }
