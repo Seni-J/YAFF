@@ -22,7 +22,7 @@ namespace YetAnotherFileFinder.Class
         protected string finalPath;
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
         {
-            
+            yaffParentForm.lvwFiles.Items.Clear();
             DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.*"); //Getting Text files
             string str = "";
