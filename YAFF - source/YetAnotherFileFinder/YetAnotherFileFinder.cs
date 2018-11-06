@@ -50,7 +50,7 @@ namespace YetAnotherFileFinder
         private void btnResearch_Click(object sender, EventArgs e)
         {
             // Check if a field has been set. Otherwise, there's a message box telling to the user that he have to put something. If a space is typed, it's like the field is not null.
-            if(string.IsNullOrEmpty(txtAuthor.Text) && string.IsNullOrEmpty(txtKeyWord.Text) && string.IsNullOrEmpty(txtModifDate.Text))
+            if(string.IsNullOrEmpty(txtAuthor.Text) && string.IsNullOrEmpty(txtKeyWord.Text) && string.IsNullOrEmpty(dtpDateModif.Text))
             {
                 MessageBox.Show("Veuillez completer un des champs pour faire une recherche avancée.","Champ(s) manquant(s).");
             }
@@ -61,12 +61,27 @@ namespace YetAnotherFileFinder
             }
         }
 
+        // Cancel button. Clear all the fields.
         private void btnCancel_Click(object sender, EventArgs e)
         {
             txtAuthor.Clear();
             txtKeyWord.Clear();
-            txtModifDate.Clear();
+            dtpDateModif.CustomFormat = " ";
             file.GetFilesFromSelectedDrive(this, selectedDrive);
+        }
+
+        // Check if a value as been selected for the calendar.
+        private void dtpDateModif_ValueChanged(object sender, EventArgs e)
+        {
+            if(dtpDateModif.Value.Date > DateTime.Today)
+            {
+                dtpDateModif.CustomFormat = " ";
+                MessageBox.Show("Vous ne pouvez pas sélectionner une date ultérieure.");
+            }
+            else
+            {
+                dtpDateModif.CustomFormat = "dd-MM-yyyy";
+            }
         }
     }
 }

@@ -40,7 +40,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnRepo = new System.Windows.Forms.Button();
             this.txtKeyWord = new System.Windows.Forms.TextBox();
-            this.txtModifDate = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.cboExtension = new System.Windows.Forms.ComboBox();
             this.lvwFiles = new System.Windows.Forms.ListView();
@@ -54,6 +53,7 @@
             this.btnSelectFFD = new System.Windows.Forms.Button();
             this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
+            this.dtpDateModif = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -70,7 +70,7 @@
             // 
             this.lblInfoDrive.AutoSize = true;
             this.lblInfoDrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDrive.Location = new System.Drawing.Point(620, 19);
+            this.lblInfoDrive.Location = new System.Drawing.Point(544, 19);
             this.lblInfoDrive.Name = "lblInfoDrive";
             this.lblInfoDrive.Size = new System.Drawing.Size(219, 25);
             this.lblInfoDrive.TabIndex = 1;
@@ -154,7 +154,7 @@
             // 
             // btnRepo
             // 
-            this.btnRepo.Location = new System.Drawing.Point(442, 464);
+            this.btnRepo.Location = new System.Drawing.Point(367, 463);
             this.btnRepo.Name = "btnRepo";
             this.btnRepo.Size = new System.Drawing.Size(138, 23);
             this.btnRepo.TabIndex = 10;
@@ -165,21 +165,14 @@
             // 
             this.txtKeyWord.Location = new System.Drawing.Point(181, 248);
             this.txtKeyWord.Name = "txtKeyWord";
-            this.txtKeyWord.Size = new System.Drawing.Size(100, 20);
+            this.txtKeyWord.Size = new System.Drawing.Size(166, 20);
             this.txtKeyWord.TabIndex = 11;
-            // 
-            // txtModifDate
-            // 
-            this.txtModifDate.Location = new System.Drawing.Point(181, 292);
-            this.txtModifDate.Name = "txtModifDate";
-            this.txtModifDate.Size = new System.Drawing.Size(100, 20);
-            this.txtModifDate.TabIndex = 12;
             // 
             // txtAuthor
             // 
             this.txtAuthor.Location = new System.Drawing.Point(181, 337);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(100, 20);
+            this.txtAuthor.Size = new System.Drawing.Size(166, 20);
             this.txtAuthor.TabIndex = 13;
             // 
             // cboExtension
@@ -194,7 +187,7 @@
             ".xlsx"});
             this.cboExtension.Location = new System.Drawing.Point(181, 380);
             this.cboExtension.Name = "cboExtension";
-            this.cboExtension.Size = new System.Drawing.Size(100, 21);
+            this.cboExtension.Size = new System.Drawing.Size(166, 21);
             this.cboExtension.TabIndex = 15;
             // 
             // lvwFiles
@@ -205,9 +198,9 @@
             this.Size,
             this.Author,
             this.ModificationDate});
-            this.lvwFiles.Location = new System.Drawing.Point(328, 174);
+            this.lvwFiles.Location = new System.Drawing.Point(367, 189);
             this.lvwFiles.Name = "lvwFiles";
-            this.lvwFiles.Size = new System.Drawing.Size(647, 227);
+            this.lvwFiles.Size = new System.Drawing.Size(608, 227);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
             this.lvwFiles.View = System.Windows.Forms.View.Details;
@@ -268,7 +261,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(314, 19);
+            this.button1.Location = new System.Drawing.Point(582, 100);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 23);
             this.button1.TabIndex = 22;
@@ -276,11 +269,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dtpDateModif
+            // 
+            this.dtpDateModif.CustomFormat = " ";
+            this.dtpDateModif.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateModif.Location = new System.Drawing.Point(181, 289);
+            this.dtpDateModif.Name = "dtpDateModif";
+            this.dtpDateModif.Size = new System.Drawing.Size(166, 20);
+            this.dtpDateModif.TabIndex = 23;
+            this.dtpDateModif.ValueChanged += new System.EventHandler(this.dtpDateModif_ValueChanged);
+            // 
             // YetAnotherFileFinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 515);
+            this.Controls.Add(this.dtpDateModif);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSelectFFD);
             this.Controls.Add(this.lblSelectFolderFromDrive);
@@ -288,7 +292,6 @@
             this.Controls.Add(this.lvwFiles);
             this.Controls.Add(this.cboExtension);
             this.Controls.Add(this.txtAuthor);
-            this.Controls.Add(this.txtModifDate);
             this.Controls.Add(this.txtKeyWord);
             this.Controls.Add(this.btnRepo);
             this.Controls.Add(this.btnCancel);
@@ -331,7 +334,6 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListView lvwFiles;
         public System.Windows.Forms.TextBox txtKeyWord;
-        public System.Windows.Forms.TextBox txtModifDate;
         public System.Windows.Forms.TextBox txtAuthor;
         public System.Windows.Forms.ComboBox cboExtension;
         public System.Windows.Forms.ColumnHeader FileName;
@@ -339,6 +341,7 @@
         private System.Windows.Forms.ColumnHeader Size;
         private System.Windows.Forms.ColumnHeader Author;
         private System.Windows.Forms.ColumnHeader ModificationDate;
+        public System.Windows.Forms.DateTimePicker dtpDateModif;
     }
 }
 

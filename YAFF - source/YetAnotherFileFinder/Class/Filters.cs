@@ -29,7 +29,7 @@ namespace YetAnotherFileFinder.Class
             {
                 keyWord = yaffFilter.txtKeyWord.Text;
             }
-            if (!string.IsNullOrEmpty(yaffFilter.txtModifDate.Text))
+            if (!string.IsNullOrEmpty(yaffFilter.dtpDateModif.Text))
             {
                 date = yaffFilter.txtModifDate.Text;
             }
@@ -43,7 +43,8 @@ namespace YetAnotherFileFinder.Class
         {
             foreach(ListViewItem file in yaffFilter.lvwFiles.Items)
             {
-                if (!file.Text.Contains(keyWord))
+                
+                if (!file.Text.ToUpper().Contains(keyWord.ToUpper()))
                 {
                     yaffFilter.lvwFiles.Items.Remove(file);
                 }
