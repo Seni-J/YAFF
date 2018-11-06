@@ -44,15 +44,16 @@
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.cboExtension = new System.Windows.Forms.ComboBox();
             this.lvwFiles = new System.Windows.Forms.ListView();
+            this.FilesName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ModificationDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.lblSelectFolderFromDrive = new System.Windows.Forms.Label();
             this.btnSelectFFD = new System.Windows.Forms.Button();
             this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
-            this.Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lastModification = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -200,17 +201,37 @@
             // 
             this.lvwFiles.BackgroundImageTiled = true;
             this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.FileName,
+            this.FilesName,
             this.Size,
             this.Author,
-            this.lastModification});
+            this.ModificationDate});
             this.lvwFiles.Location = new System.Drawing.Point(328, 174);
             this.lvwFiles.Name = "lvwFiles";
-            this.lvwFiles.Size = new System.Drawing.Size(533, 227);
+            this.lvwFiles.Size = new System.Drawing.Size(647, 227);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
             this.lvwFiles.View = System.Windows.Forms.View.Details;
             this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
+            // 
+            // FilesName
+            // 
+            this.FilesName.Text = "Name";
+            this.FilesName.Width = 210;
+            // 
+            // Size
+            // 
+            this.Size.Text = "Size";
+            this.Size.Width = 110;
+            // 
+            // Author
+            // 
+            this.Author.Text = "Author";
+            this.Author.Width = 150;
+            // 
+            // ModificationDate
+            // 
+            this.ModificationDate.Text = "Last modification date";
+            this.ModificationDate.Width = 116;
             // 
             // FileName
             // 
@@ -254,22 +275,6 @@
             this.button1.Text = "Debug Button";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Size
-            // 
-            this.Size.Text = "Size";
-            this.Size.Width = 75;
-            // 
-            // lastModification
-            // 
-            this.lastModification.DisplayIndex = 2;
-            this.lastModification.Text = "Modifier le ";
-            this.lastModification.Width = 64;
-            // 
-            // Author
-            // 
-            this.Author.DisplayIndex = 3;
-            this.Author.Text = "Auteur";
             // 
             // YetAnotherFileFinder
             // 
@@ -330,6 +335,10 @@
         public System.Windows.Forms.TextBox txtAuthor;
         public System.Windows.Forms.ComboBox cboExtension;
         public System.Windows.Forms.ColumnHeader FileName;
+        private System.Windows.Forms.ColumnHeader FilesName;
+        private System.Windows.Forms.ColumnHeader Size;
+        private System.Windows.Forms.ColumnHeader Author;
+        private System.Windows.Forms.ColumnHeader ModificationDate;
     }
 }
 
