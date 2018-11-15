@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 
 /// <summary>
 /// Drive Class. 
@@ -32,9 +33,17 @@ namespace YetAnotherFileFinder.Class
            
         }
 
-        public void LoadFolders(string selectedPath){
-           
+        public void LoadFolderInExplorer(string selectedPath){
+            selectedPath += @"\";
+            // combine the arguments together
+            // it doesn't matter if there is a space after ','
+            string argument = "/select, \"" + selectedPath + "\"";
+            System.Windows.Forms.MessageBox.Show(argument);
+
+            Process.Start("explorer.exe", argument);
         }
+
+
         public void LoadFoldersFromSelectedDrive(string selectedDrive)
         {
             

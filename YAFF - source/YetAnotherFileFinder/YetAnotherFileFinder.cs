@@ -83,5 +83,16 @@ namespace YetAnotherFileFinder
                 dtpDateModif.CustomFormat = "dd-MM-yyyy";
             }
         }
+
+        private void btnRepo_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(selectedDrive)) {
+                MessageBox.Show("Aucun répertoire n'a été sélectionné.");
+            }
+            else
+            {
+                drive.LoadFolderInExplorer(selectedDrive);
+            }
+        }
     }
 }

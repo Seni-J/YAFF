@@ -160,6 +160,7 @@
             this.btnRepo.TabIndex = 10;
             this.btnRepo.Text = "Ouvrir le répértoire";
             this.btnRepo.UseVisualStyleBackColor = true;
+            this.btnRepo.Click += new System.EventHandler(this.btnRepo_Click);
             // 
             // txtKeyWord
             // 
