@@ -240,6 +240,7 @@
             this.btnOpenFile.TabIndex = 19;
             this.btnOpenFile.Text = "Ouvrir le fichier";
             this.btnOpenFile.UseVisualStyleBackColor = true;
+            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
             // lblSelectFolderFromDrive
             // 

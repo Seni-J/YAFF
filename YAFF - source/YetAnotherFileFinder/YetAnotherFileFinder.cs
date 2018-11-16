@@ -18,6 +18,7 @@ namespace YetAnotherFileFinder
         Class.Filters filter = new Class.Filters();
         
         public string selectedDrive;
+        public string selectedFile;
 
         public YetAnotherFileFinder()
         {
@@ -52,7 +53,7 @@ namespace YetAnotherFileFinder
             // Check if a field has been set. Otherwise, there's a message box telling to the user that he have to put something. If a space is typed, it's like the field is not null.
             if(string.IsNullOrEmpty(txtAuthor.Text) && string.IsNullOrEmpty(txtKeyWord.Text) && string.IsNullOrEmpty(dtpDateModif.Text))
             {
-                MessageBox.Show("Veuillez completer un des champs pour faire une recherche avancée.","Champ(s) manquant(s).");
+                MessageBox.Show("Veuillez compléter un des champs pour faire une recherche avancée.","Champ(s) manquant(s).");
             }
             else
             {
@@ -66,6 +67,8 @@ namespace YetAnotherFileFinder
         {
             txtAuthor.Clear();
             txtKeyWord.Clear();
+            txtKeyWord.Text = "";
+            txtAuthor.Text = "";
             dtpDateModif.CustomFormat = " ";
             file.GetFilesFromSelectedDrive(this, selectedDrive);
         }
@@ -92,6 +95,21 @@ namespace YetAnotherFileFinder
             else
             {
                 drive.LoadFolderInExplorer(selectedDrive);
+            }
+        }
+
+        private void btnOpenFile_Click(object sender, EventArgs e)
+        {
+            selectedFile = lvwFiles.SelectedItems[0].Text;
+            if (string.IsNullOrEmpty(selectedDrive))
+            {
+                MessageBox.Show("Aucun répertoire n'a été sélectionné.");
+            }else if (string.IsNullOrEmpty(selectedDrive)){
+                MessageBox.Show("Aucun fichier n'a été sélectionné.");
+            }
+            else
+            {
+                file.ReadFile(selectedDrive, selectedFile);
             }
         }
     }

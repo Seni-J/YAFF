@@ -33,14 +33,14 @@ namespace YetAnotherFileFinder.Class
            
         }
 
+        //Goes into the selected repository
         public void LoadFolderInExplorer(string selectedPath){
-            selectedPath += @"\";
-            // combine the arguments together
-            // it doesn't matter if there is a space after ','
-            string argument = "/select, \"" + selectedPath + "\"";
-            System.Windows.Forms.MessageBox.Show(argument);
-
-            Process.Start("explorer.exe", argument);
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                Arguments = selectedPath,
+                FileName = "explorer.exe"
+            };
+            Process.Start(startInfo);
         }
 
 

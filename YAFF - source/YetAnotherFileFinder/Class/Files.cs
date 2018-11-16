@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 /*
  * CHANGER
@@ -18,8 +19,9 @@ namespace YetAnotherFileFinder.Class
 {
     class Files
     {
-        
         protected string finalPath;
+
+        //Get the files from a selected drive or folder.
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
         {
             yaffParentForm.lvwFiles.Items.Clear();
@@ -28,8 +30,8 @@ namespace YetAnotherFileFinder.Class
             string str = "";
             foreach (FileInfo file in Files)
             {
-                var lastModified = System.IO.File.GetLastWriteTime(path + "/" + file.Name);
-                string user = System.IO.File.GetAccessControl(path + "/" + file.Name).GetOwner(typeof(System.Security.Principal.NTAccount)).ToString();
+                var lastModified = File.GetLastWriteTime(path + "/" + file.Name);
+                string user = File.GetAccessControl(path + "/" + file.Name).GetOwner(typeof(System.Security.Principal.NTAccount)).ToString();
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = file.Name;
                 lvi.SubItems.Add(file.Length.ToString() + " octet ");
@@ -48,7 +50,9 @@ namespace YetAnotherFileFinder.Class
         public void ConvertFile(){
         }
 
-        public void ReadFile(){
+        //Read the file with the associated program (associated program is fixed in the registry).
+        public void ReadFile(string selectedDrive, string selectedFile){
+            Process.Start(Path.Combine(selectedDrive, selectedFile));
         }
     }
 }

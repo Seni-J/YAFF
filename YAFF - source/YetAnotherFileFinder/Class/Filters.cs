@@ -43,7 +43,6 @@ namespace YetAnotherFileFinder.Class
         {
             foreach(ListViewItem file in yaffFilter.lvwFiles.Items)
             {
-                
                 if (!file.Text.ToUpper().Contains(keyWord.ToUpper()))
                 {
                     yaffFilter.lvwFiles.Items.Remove(file);
