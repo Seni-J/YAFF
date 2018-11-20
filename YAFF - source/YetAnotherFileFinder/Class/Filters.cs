@@ -18,17 +18,17 @@ namespace YetAnotherFileFinder.Class
 {
     class Filters
     {
+        string filename;
         string keyWord;
         string date;
         string author;
-        string ext;
 
         //As the 3 fields can be filled, We need to put them in a string so we can use them later on.
         public void CheckFilter(YetAnotherFileFinder yaffFilter)
         {
-            if (!string.IsNullOrEmpty(yaffFilter.txtKeyWord.Text))
+            if (!string.IsNullOrEmpty(yaffFilter.txtFileName.Text))
             {
-                keyWord = yaffFilter.txtKeyWord.Text;
+                filename = yaffFilter.txtFileName.Text;
             }
             if (!string.IsNullOrEmpty(yaffFilter.dtpDateModif.Text))
             {
@@ -38,28 +38,15 @@ namespace YetAnotherFileFinder.Class
             {
                 author = yaffFilter.txtAuthor.Text;
             }
-            if(yaffFilter.cboExtension.SelectedIndex > -1)
-            {
-                ext = yaffFilter.cboExtension.SelectedItem.ToString();
-            }
         }
 
         public void SearchWithFilter(YetAnotherFileFinder yaffFilter)
         {
-            if (keyWord != null)
+            if (filename != null)
             {
                 foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
                 {
-                    if (!file.Text.ToUpper().Contains(keyWord.ToUpper()))
-                    {
-                        yaffFilter.lvwFiles.Items.Remove(file);
-                    }
-                }
-            }else if(ext != null)
-            {
-                foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
-                {
-                    if(!file.Text.Contains(ext))
+                    if (!file.Text.ToUpper().Contains(filename.ToUpper()))
                     {
                         yaffFilter.lvwFiles.Items.Remove(file);
                     }

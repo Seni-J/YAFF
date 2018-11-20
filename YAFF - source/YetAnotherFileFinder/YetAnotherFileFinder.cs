@@ -42,7 +42,7 @@ namespace YetAnotherFileFinder
         private void button1_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show(cboExtension.SelectedItem.ToString());
+            MessageBox.Show("Debug");
         }
 
         private void lvwFiles_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,10 +76,11 @@ namespace YetAnotherFileFinder
             if(selectedDrive != null) { 
                 txtAuthor.Clear();
                 txtKeyWord.Clear();
+                txtFileName.Clear();
+                txtFileName.Text = "";
                 txtKeyWord.Text = "";
                 txtAuthor.Text = "";
                 dtpDateModif.CustomFormat = " ";
-                cboExtension.SelectedIndex = -1;
                 file.GetFilesFromSelectedDrive(this, selectedDrive);
             }
             else
