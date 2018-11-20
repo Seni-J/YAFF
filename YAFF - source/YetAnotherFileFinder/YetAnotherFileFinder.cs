@@ -38,9 +38,11 @@ namespace YetAnotherFileFinder
 
         }
 
+        //Debug button
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(selectedDrive);
+
+            MessageBox.Show(cboExtension.SelectedItem.ToString());
         }
 
         private void lvwFiles_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,27 +52,40 @@ namespace YetAnotherFileFinder
 
         private void btnResearch_Click(object sender, EventArgs e)
         {
-            // Check if a field has been set. Otherwise, there's a message box telling to the user that he have to put something. If a space is typed, it's like the field is not null.
-            if(string.IsNullOrEmpty(txtAuthor.Text) && string.IsNullOrEmpty(txtKeyWord.Text) && string.IsNullOrEmpty(dtpDateModif.Text))
-            {
-                MessageBox.Show("Veuillez compléter un des champs pour faire une recherche avancée.","Champ(s) manquant(s).");
+            if(selectedDrive != null) { 
+                // Check if a field has been set. Otherwise, there's a message box telling to the user that he have to put something. If a space is typed, it's like the field is not null.
+                if(string.IsNullOrEmpty(txtAuthor.Text) && string.IsNullOrEmpty(txtKeyWord.Text) && string.IsNullOrEmpty(dtpDateModif.Text))
+                {
+                    MessageBox.Show("Veuillez compléter un des champs pour faire une recherche avancée.","Champ(s) manquant(s).");
+                }
+                else
+                {
+                    filter.CheckFilter(this);
+                    filter.SearchWithFilter(this);
+                }
             }
             else
             {
-                filter.CheckFilter(this);
-                filter.SearchWithFilter(this);
+                MessageBox.Show("Aucun répértoire n'a été séléctionné.");
             }
         }
 
         // Cancel button. Clear all the fields.
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            txtAuthor.Clear();
-            txtKeyWord.Clear();
-            txtKeyWord.Text = "";
-            txtAuthor.Text = "";
-            dtpDateModif.CustomFormat = " ";
-            file.GetFilesFromSelectedDrive(this, selectedDrive);
+            if(selectedDrive != null) { 
+                txtAuthor.Clear();
+                txtKeyWord.Clear();
+                txtKeyWord.Text = "";
+                txtAuthor.Text = "";
+                dtpDateModif.CustomFormat = " ";
+                cboExtension.SelectedIndex = -1;
+                file.GetFilesFromSelectedDrive(this, selectedDrive);
+            }
+            else
+            {
+                MessageBox.Show("Aucun répértoire n'a été séléctionné.");
+            }
         }
 
         // Check if a value as been selected for the calendar.

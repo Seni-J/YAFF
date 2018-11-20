@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblSelectDriveHeader = new System.Windows.Forms.Label();
-            this.lblInfoDrive = new System.Windows.Forms.Label();
+            this.lblInfoFiles = new System.Windows.Forms.Label();
             this.lblResearch = new System.Windows.Forms.Label();
             this.lblKeyword = new System.Windows.Forms.Label();
             this.lblModifDate = new System.Windows.Forms.Label();
@@ -60,21 +60,21 @@
             // 
             this.lblSelectDriveHeader.AutoSize = true;
             this.lblSelectDriveHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectDriveHeader.Location = new System.Drawing.Point(44, 19);
+            this.lblSelectDriveHeader.Location = new System.Drawing.Point(47, 19);
             this.lblSelectDriveHeader.Name = "lblSelectDriveHeader";
             this.lblSelectDriveHeader.Size = new System.Drawing.Size(233, 25);
             this.lblSelectDriveHeader.TabIndex = 0;
             this.lblSelectDriveHeader.Text = "Sélectionner un lecteur";
             // 
-            // lblInfoDrive
+            // lblInfoFiles
             // 
-            this.lblInfoDrive.AutoSize = true;
-            this.lblInfoDrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDrive.Location = new System.Drawing.Point(544, 19);
-            this.lblInfoDrive.Name = "lblInfoDrive";
-            this.lblInfoDrive.Size = new System.Drawing.Size(219, 25);
-            this.lblInfoDrive.TabIndex = 1;
-            this.lblInfoDrive.Text = "Information du lecteur";
+            this.lblInfoFiles.AutoSize = true;
+            this.lblInfoFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoFiles.Location = new System.Drawing.Point(589, 21);
+            this.lblInfoFiles.Name = "lblInfoFiles";
+            this.lblInfoFiles.Size = new System.Drawing.Size(174, 25);
+            this.lblInfoFiles.TabIndex = 1;
+            this.lblInfoFiles.Text = "Liste des fichiers";
             // 
             // lblResearch
             // 
@@ -199,9 +199,9 @@
             this.Size,
             this.Author,
             this.ModificationDate});
-            this.lvwFiles.Location = new System.Drawing.Point(367, 189);
+            this.lvwFiles.Location = new System.Drawing.Point(367, 71);
             this.lvwFiles.Name = "lvwFiles";
-            this.lvwFiles.Size = new System.Drawing.Size(608, 227);
+            this.lvwFiles.Size = new System.Drawing.Size(608, 345);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
             this.lvwFiles.View = System.Windows.Forms.View.Details;
@@ -209,23 +209,23 @@
             // 
             // FilesName
             // 
-            this.FilesName.Text = "Name";
-            this.FilesName.Width = 210;
+            this.FilesName.Text = "Nom";
+            this.FilesName.Width = 187;
             // 
             // Size
             // 
-            this.Size.Text = "Size";
+            this.Size.Text = "Taille du fichier";
             this.Size.Width = 110;
             // 
             // Author
             // 
-            this.Author.Text = "Author";
-            this.Author.Width = 150;
+            this.Author.Text = "Auteur";
+            this.Author.Width = 96;
             // 
             // ModificationDate
             // 
-            this.ModificationDate.Text = "Last modification date";
-            this.ModificationDate.Width = 116;
+            this.ModificationDate.Text = "Date dernière modification";
+            this.ModificationDate.Width = 170;
             // 
             // FileName
             // 
@@ -263,7 +263,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(582, 100);
+            this.button1.Location = new System.Drawing.Point(343, 23);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 23);
             this.button1.TabIndex = 22;
@@ -304,7 +304,7 @@
             this.Controls.Add(this.lblModifDate);
             this.Controls.Add(this.lblKeyword);
             this.Controls.Add(this.lblResearch);
-            this.Controls.Add(this.lblInfoDrive);
+            this.Controls.Add(this.lblInfoFiles);
             this.Controls.Add(this.lblSelectDriveHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -319,7 +319,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblSelectDriveHeader;
-        private System.Windows.Forms.Label lblInfoDrive;
+        private System.Windows.Forms.Label lblInfoFiles;
         private System.Windows.Forms.Label lblResearch;
         private System.Windows.Forms.Label lblKeyword;
         private System.Windows.Forms.Label lblModifDate;
