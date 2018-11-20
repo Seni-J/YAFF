@@ -27,6 +27,8 @@ namespace YetAnotherFileFinder.Class
             yaffParentForm.lvwFiles.Items.Clear();
             DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.*"); //Getting Text files
+
+
             string str = "";
             foreach (FileInfo file in Files)
             {
@@ -44,8 +46,6 @@ namespace YetAnotherFileFinder.Class
             }
         }
        
-        public void ShowResults(){
-        }
 
         public void ConvertFile(){
         }
