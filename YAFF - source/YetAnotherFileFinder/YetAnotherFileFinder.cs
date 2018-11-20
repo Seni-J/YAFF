@@ -34,6 +34,7 @@ namespace YetAnotherFileFinder
         {
             fbdFolderLookup.ShowDialog();
             selectedDrive = fbdFolderLookup.SelectedPath;
+            lvwFiles.Items.Clear();
             file.GetFilesFromSelectedDrive(this, selectedDrive);
 
         }
@@ -110,7 +111,7 @@ namespace YetAnotherFileFinder
             }
             else
             {
-                drive.LoadFolderInExplorer(selectedDrive);
+                drive.LoadFolderInExplorer(lvwFiles.SelectedItems[0].SubItems[1].Text);
             }
         }
 
@@ -125,7 +126,7 @@ namespace YetAnotherFileFinder
             }
             else
             {
-                file.ReadFile(selectedDrive, selectedFile);
+                file.ReadFile(lvwFiles.SelectedItems[0].SubItems[1].Text + "/" + lvwFiles.SelectedItems[0].Text);   
             }
         }
     }
