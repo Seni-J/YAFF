@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 /*
  * CHANGER
@@ -18,20 +19,23 @@ namespace YetAnotherFileFinder.Class
 {
     class Files
     {
-        
         protected string finalPath;
+
+        //Get the files from a selected drive or folder.
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
         {
-            yaffParentForm.lvwFiles.Items.Clear();
+            
             DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.*"); //Getting Text files
+            DirectoryInfo[] Directories = d.GetDirectories("*"); 
             string str = "";
             foreach (FileInfo file in Files)
             {
-                var lastModified = System.IO.File.GetLastWriteTime(path + "/" + file.Name);
-                string user = System.IO.File.GetAccessControl(path + "/" + file.Name).GetOwner(typeof(System.Security.Principal.NTAccount)).ToString();
+                var lastModified = File.GetLastWriteTime(path + "/" + file.Name);
+                string user = File.GetAccessControl(path + "/" + file.Name).GetOwner(typeof(System.Security.Principal.NTAccount)).ToString();
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = file.Name;
+                lvi.SubItems.Add(file.Directory.ToString());
                 lvi.SubItems.Add(file.Length.ToString() + " octet ");
                 lvi.SubItems.Add(user.ToString());
                 lvi.SubItems.Add(lastModified.ToString());
@@ -40,6 +44,11 @@ namespace YetAnotherFileFinder.Class
                 yaffParentForm.lvwFiles.Items.Add(lvi);
                
             }
+            foreach (DirectoryInfo  Directory in Directories)
+            {
+                GetFilesFromSelectedDrive(yaffParentForm, path + "/" + Directory.Name);
+            }
+           
         }
        
         public void ShowResults(){
@@ -48,7 +57,9 @@ namespace YetAnotherFileFinder.Class
         public void ConvertFile(){
         }
 
-        public void ReadFile(){
+        //Read the file with the associated program (associated program is fixed in the registry).
+        public void ReadFile(string path){
+            Process.Start(path);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace YetAnotherFileFinder.Class
             }
             if (!string.IsNullOrEmpty(yaffFilter.dtpDateModif.Text))
             {
-                date = yaffFilter.txtModifDate.Text;
+                date = yaffFilter.dtpDateModif.Text;
             }
             if (!string.IsNullOrEmpty(yaffFilter.txtAuthor.Text))
             {
@@ -43,7 +43,6 @@ namespace YetAnotherFileFinder.Class
         {
             foreach(ListViewItem file in yaffFilter.lvwFiles.Items)
             {
-                
                 if (!file.Text.ToUpper().Contains(keyWord.ToUpper()))
                 {
                     yaffFilter.lvwFiles.Items.Remove(file);

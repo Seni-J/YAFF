@@ -54,6 +54,7 @@
             this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.dtpDateModif = new System.Windows.Forms.DateTimePicker();
+            this.FilePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -160,6 +161,7 @@
             this.btnRepo.TabIndex = 10;
             this.btnRepo.Text = "Ouvrir le répértoire";
             this.btnRepo.UseVisualStyleBackColor = true;
+            this.btnRepo.Click += new System.EventHandler(this.btnRepo_Click);
             // 
             // txtKeyWord
             // 
@@ -195,9 +197,11 @@
             this.lvwFiles.BackgroundImageTiled = true;
             this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.FilesName,
+            this.FilePath,
             this.Size,
             this.Author,
             this.ModificationDate});
+            this.lvwFiles.FullRowSelect = true;
             this.lvwFiles.Location = new System.Drawing.Point(367, 189);
             this.lvwFiles.Name = "lvwFiles";
             this.lvwFiles.Size = new System.Drawing.Size(608, 227);
@@ -213,16 +217,19 @@
             // 
             // Size
             // 
+            this.Size.DisplayIndex = 1;
             this.Size.Text = "Size";
             this.Size.Width = 110;
             // 
             // Author
             // 
+            this.Author.DisplayIndex = 2;
             this.Author.Text = "Author";
             this.Author.Width = 150;
             // 
             // ModificationDate
             // 
+            this.ModificationDate.DisplayIndex = 3;
             this.ModificationDate.Text = "Last modification date";
             this.ModificationDate.Width = 116;
             // 
@@ -239,6 +246,7 @@
             this.btnOpenFile.TabIndex = 19;
             this.btnOpenFile.Text = "Ouvrir le fichier";
             this.btnOpenFile.UseVisualStyleBackColor = true;
+            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
             // lblSelectFolderFromDrive
             // 
@@ -278,6 +286,10 @@
             this.dtpDateModif.Size = new System.Drawing.Size(166, 20);
             this.dtpDateModif.TabIndex = 23;
             this.dtpDateModif.ValueChanged += new System.EventHandler(this.dtpDateModif_ValueChanged);
+            // 
+            // FilePath
+            // 
+            this.FilePath.Text = "Path";
             // 
             // YetAnotherFileFinder
             // 
@@ -342,6 +354,7 @@
         private System.Windows.Forms.ColumnHeader Author;
         private System.Windows.Forms.ColumnHeader ModificationDate;
         public System.Windows.Forms.DateTimePicker dtpDateModif;
+        private System.Windows.Forms.ColumnHeader FilePath;
     }
 }
 
