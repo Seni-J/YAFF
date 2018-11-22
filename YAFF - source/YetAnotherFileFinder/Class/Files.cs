@@ -28,8 +28,6 @@ namespace YetAnotherFileFinder.Class
             DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.*"); //Getting Text files
 
-
-            string str = "";
             foreach (FileInfo file in Files)
             {
                 var lastModified = File.GetLastWriteTime(path + "/" + file.Name);
