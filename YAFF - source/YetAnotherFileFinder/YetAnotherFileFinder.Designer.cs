@@ -42,6 +42,7 @@
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.lvwFiles = new System.Windows.Forms.ListView();
             this.FilesName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FilePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ModificationDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,7 +55,6 @@
             this.dtpDateModif = new System.Windows.Forms.DateTimePicker();
             this.lblFileName = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
-            this.FilePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -178,7 +178,7 @@
             this.Author,
             this.ModificationDate});
             this.lvwFiles.FullRowSelect = true;
-            this.lvwFiles.Location = new System.Drawing.Point(367, 189);
+            this.lvwFiles.Location = new System.Drawing.Point(367, 71);
             this.lvwFiles.Name = "lvwFiles";
             this.lvwFiles.Size = new System.Drawing.Size(608, 345);
             this.lvwFiles.TabIndex = 18;
@@ -191,21 +191,22 @@
             this.FilesName.Text = "Nom";
             this.FilesName.Width = 187;
             // 
+            // FilePath
+            // 
+            this.FilePath.Text = "Path";
+            // 
             // Size
             // 
-            this.Size.DisplayIndex = 1;
             this.Size.Text = "Size";
             this.Size.Width = 110;
             // 
             // Author
             // 
-            this.Author.DisplayIndex = 2;
             this.Author.Text = "Author";
             this.Author.Width = 150;
             // 
             // ModificationDate
             // 
-            this.ModificationDate.DisplayIndex = 3;
             this.ModificationDate.Text = "Last modification date";
             this.ModificationDate.Width = 116;
             // 
@@ -262,10 +263,6 @@
             this.dtpDateModif.Size = new System.Drawing.Size(166, 20);
             this.dtpDateModif.TabIndex = 23;
             this.dtpDateModif.ValueChanged += new System.EventHandler(this.dtpDateModif_ValueChanged);
-            // 
-            // FilePath
-            // 
-            this.FilePath.Text = "Path";
             // 
             // lblFileName
             // 
