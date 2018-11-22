@@ -173,7 +173,6 @@
             this.lvwFiles.BackgroundImageTiled = true;
             this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.FilesName,
-            this.FilePath,
             this.Size,
             this.Author,
             this.ModificationDate});
