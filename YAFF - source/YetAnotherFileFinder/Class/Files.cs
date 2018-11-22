@@ -35,6 +35,7 @@ namespace YetAnotherFileFinder.Class
                 string user = File.GetAccessControl(path + "/" + file.Name).GetOwner(typeof(System.Security.Principal.NTAccount)).ToString();
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = file.Name;
+                lvi.SubItems.Add(file.Directory.ToString());
                 lvi.SubItems.Add(file.Length.ToString() + " octet ");
                 lvi.SubItems.Add(user.ToString());
                 lvi.SubItems.Add(lastModified.ToString());
@@ -55,8 +56,8 @@ namespace YetAnotherFileFinder.Class
         }
 
         //Read the file with the associated program (associated program is fixed in the registry).
-        public void ReadFile(string selectedDrive, string selectedFile){
-            Process.Start(Path.Combine(selectedDrive, selectedFile));
+        public void ReadFile(string path){
+            Process.Start(path);
         }
     }
 }
