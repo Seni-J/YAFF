@@ -24,10 +24,11 @@ namespace YetAnotherFileFinder.Class
         //Get the files from a selected drive or folder.
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
         {
-            
+
             DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.*"); //Getting Text files
-            DirectoryInfo[] Directories = d.GetDirectories("*"); 
+
+
             string str = "";
             foreach (FileInfo file in Files)
             {
@@ -39,20 +40,18 @@ namespace YetAnotherFileFinder.Class
                 lvi.SubItems.Add(file.Length.ToString() + " octet ");
                 lvi.SubItems.Add(user.ToString());
                 lvi.SubItems.Add(lastModified.ToString());
-                
+
                 //lvi.SubItems.Add(file.Name);
                 yaffParentForm.lvwFiles.Items.Add(lvi);
-               
+
             }
             foreach (DirectoryInfo  Directory in Directories)
             {
                 GetFilesFromSelectedDrive(yaffParentForm, path + "/" + Directory.Name);
             }
-           
+
         }
-       
-        public void ShowResults(){
-        }
+
 
         public void ConvertFile(){
         }
