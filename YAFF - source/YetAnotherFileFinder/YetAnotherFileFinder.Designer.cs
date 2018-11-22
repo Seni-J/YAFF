@@ -53,7 +53,6 @@
             this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.dtpDateModif = new System.Windows.Forms.DateTimePicker();
-            this.FilePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblFileName = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
