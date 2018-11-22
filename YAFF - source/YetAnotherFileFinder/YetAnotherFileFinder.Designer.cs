@@ -42,6 +42,7 @@
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.lvwFiles = new System.Windows.Forms.ListView();
             this.FilesName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FilePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ModificationDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -172,9 +173,11 @@
             this.lvwFiles.BackgroundImageTiled = true;
             this.lvwFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.FilesName,
+            this.FilePath,
             this.Size,
             this.Author,
             this.ModificationDate});
+            this.lvwFiles.FullRowSelect = true;
             this.lvwFiles.Location = new System.Drawing.Point(367, 71);
             this.lvwFiles.Name = "lvwFiles";
             this.lvwFiles.Size = new System.Drawing.Size(608, 345);
@@ -188,20 +191,24 @@
             this.FilesName.Text = "Nom";
             this.FilesName.Width = 187;
             // 
+            // FilePath
+            // 
+            this.FilePath.Text = "Path";
+            // 
             // Size
             // 
-            this.Size.Text = "Taille du fichier";
+            this.Size.Text = "Size";
             this.Size.Width = 110;
             // 
             // Author
             // 
-            this.Author.Text = "Auteur";
-            this.Author.Width = 96;
+            this.Author.Text = "Author";
+            this.Author.Width = 150;
             // 
             // ModificationDate
             // 
-            this.ModificationDate.Text = "Date dernière modification";
-            this.ModificationDate.Width = 170;
+            this.ModificationDate.Text = "Last modification date";
+            this.ModificationDate.Width = 116;
             // 
             // FileName
             // 
@@ -334,6 +341,7 @@
         private System.Windows.Forms.ColumnHeader Author;
         private System.Windows.Forms.ColumnHeader ModificationDate;
         public System.Windows.Forms.DateTimePicker dtpDateModif;
+        private System.Windows.Forms.ColumnHeader FilePath;
         private System.Windows.Forms.Label lblFileName;
         public System.Windows.Forms.TextBox txtFileName;
     }
