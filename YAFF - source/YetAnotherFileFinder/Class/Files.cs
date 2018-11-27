@@ -20,6 +20,7 @@ namespace YetAnotherFileFinder.Class
     class Files
     {
         protected string finalPath;
+        //TEST
 
         //Get the files from a selected drive or folder.
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
@@ -51,8 +52,6 @@ namespace YetAnotherFileFinder.Class
            
         }
        
-        public void ShowResults(){
-        }
 
         public void ConvertFile(){
         }
