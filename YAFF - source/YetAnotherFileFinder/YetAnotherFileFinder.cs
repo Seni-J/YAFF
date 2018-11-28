@@ -82,6 +82,7 @@ namespace YetAnotherFileFinder
                 txtKeyWord.Text = "";
                 txtAuthor.Text = "";
                 dtpDateModif.CustomFormat = " ";
+                lvwFiles.Items.Clear();
                 file.GetFilesFromSelectedDrive(this, selectedDrive);
             }
             else

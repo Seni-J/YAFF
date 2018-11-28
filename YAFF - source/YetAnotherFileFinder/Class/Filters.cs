@@ -20,7 +20,7 @@ namespace YetAnotherFileFinder.Class
     {
         string filename;
         string keyWord;
-        string date;
+        DateTime date;
         string author;
 
         //As the 3 fields can be filled, We need to put them in a string so we can use them later on.
@@ -32,7 +32,7 @@ namespace YetAnotherFileFinder.Class
             }
             if (!string.IsNullOrEmpty(yaffFilter.dtpDateModif.Text))
             {
-                date = yaffFilter.dtpDateModif.Text;
+                date = yaffFilter.dtpDateModif.Value.Date;
             }
             if (!string.IsNullOrEmpty(yaffFilter.txtAuthor.Text))
             {
@@ -47,6 +47,17 @@ namespace YetAnotherFileFinder.Class
                 foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
                 {
                     if (!file.Text.ToUpper().Contains(filename.ToUpper()))
+                    {
+                        yaffFilter.lvwFiles.Items.Remove(file);
+                    }
+                }
+            }
+            if(date != null)
+            {
+                foreach(ListViewItem file in yaffFilter.lvwFiles.Items)
+                {
+                   string path = file.SubItems[1].Text + "/" + file.Text;
+                   if(File.GetLastWriteTime(path).Date != date)
                     {
                         yaffFilter.lvwFiles.Items.Remove(file);
                     }
