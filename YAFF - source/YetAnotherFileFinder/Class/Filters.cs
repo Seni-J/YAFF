@@ -19,7 +19,6 @@ namespace YetAnotherFileFinder.Class
     class Filters
     {
         string filename;
-        string keyWord;
         DateTime date;
         string author;
 
@@ -30,7 +29,7 @@ namespace YetAnotherFileFinder.Class
             {
                 filename = yaffFilter.txtFileName.Text;
             }
-            if (!string.IsNullOrEmpty(yaffFilter.dtpDateModif.Text))
+            if (yaffFilter.dtpDateModif.Text != " ")
             {
                 date = yaffFilter.dtpDateModif.Value.Date;
             }
@@ -51,13 +50,21 @@ namespace YetAnotherFileFinder.Class
                         yaffFilter.lvwFiles.Items.Remove(file);
                     }
                 }
-            }
-            if(date != null)
+            }else if(date != null)
             {
                 foreach(ListViewItem file in yaffFilter.lvwFiles.Items)
                 {
                    string path = file.SubItems[1].Text + "/" + file.Text;
                    if(File.GetLastWriteTime(path).Date != date)
+                    {
+                        yaffFilter.lvwFiles.Items.Remove(file);
+                    }
+                }
+            }else if(author != null)
+            {
+                foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
+                {
+                    if (!file.SubItems[3].Text.ToUpper().Contains(author.ToUpper()))
                     {
                         yaffFilter.lvwFiles.Items.Remove(file);
                     }
