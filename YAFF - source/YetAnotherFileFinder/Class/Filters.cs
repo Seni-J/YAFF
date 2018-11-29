@@ -19,7 +19,7 @@ namespace YetAnotherFileFinder.Class
     class Filters
     {
         string filename;
-        DateTime date;
+        DateTime? date = null;
         string author;
 
         //As the 3 fields can be filled, We need to put them in a string so we can use them later on.
@@ -41,35 +41,44 @@ namespace YetAnotherFileFinder.Class
 
         public void SearchWithFilter(YetAnotherFileFinder yaffFilter)
         {
-            if (filename != null)
+
+            foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
             {
-                foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
+                if (filename != null)
                 {
                     if (!file.Text.ToUpper().Contains(filename.ToUpper()))
                     {
                         yaffFilter.lvwFiles.Items.Remove(file);
+                        continue;
                     }
                 }
-            }else if(date != null)
-            {
-                foreach(ListViewItem file in yaffFilter.lvwFiles.Items)
+                if (date != null)
                 {
-                   string path = file.SubItems[1].Text + "/" + file.Text;
-                   if(File.GetLastWriteTime(path).Date != date)
+                    string path = file.SubItems[1].Text + "/" + file.Text;
+                    string[] dateNoTime = date.ToString().Split(' ');
+                    if (!file.SubItems[4].Text.Contains(dateNoTime[0]))
                     {
                         yaffFilter.lvwFiles.Items.Remove(file);
+                        continue;
                     }
                 }
-            }else if(author != null)
-            {
-                foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
+                if (author != null)
                 {
                     if (!file.SubItems[3].Text.ToUpper().Contains(author.ToUpper()))
                     {
                         yaffFilter.lvwFiles.Items.Remove(file);
+                        continue;
                     }
                 }
-            }
-        } 
+            } 
+        }
+
+        public void ResetFilters()
+        {
+            filename = null;
+            date = null;
+            author = null;
+        }
+       
     }
 }

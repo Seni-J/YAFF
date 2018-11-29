@@ -27,7 +27,7 @@ namespace YetAnotherFileFinder
 
         private void YetAnotherFileFinder_Load(object sender, EventArgs e)
         {
-           
+            dtpDateModif.CustomFormat = " ";
         }
 
         public void btnSelectFFD_Click(object sender, EventArgs e)
@@ -43,13 +43,9 @@ namespace YetAnotherFileFinder
         private void button1_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("Debug");
+            MessageBox.Show(dtpDateModif.ToString());
         }
 
-        private void lvwFiles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnResearch_Click(object sender, EventArgs e)
         {
@@ -61,6 +57,7 @@ namespace YetAnotherFileFinder
                 }
                 else
                 {
+                    
                     filter.CheckFilter(this);
                     filter.SearchWithFilter(this);
                 }
@@ -83,6 +80,7 @@ namespace YetAnotherFileFinder
                 txtAuthor.Text = "";
                 dtpDateModif.CustomFormat = " ";
                 lvwFiles.Items.Clear();
+                filter.ResetFilters();
                 file.GetFilesFromSelectedDrive(this, selectedDrive);
             }
             else
