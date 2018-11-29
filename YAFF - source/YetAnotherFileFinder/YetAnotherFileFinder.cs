@@ -80,6 +80,8 @@ namespace YetAnotherFileFinder
                 txtAuthor.Text = "";
                 dtpDateModif.CustomFormat = " ";
                 lvwFiles.Items.Clear();
+                pgbProgess.Visible = false;
+                pgbProgess.Value = 0;
                 filter.ResetFilters();
                 file.GetFilesFromSelectedDrive(this, selectedDrive);
             }

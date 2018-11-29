@@ -55,6 +55,7 @@
             this.dtpDateModif = new System.Windows.Forms.DateTimePicker();
             this.lblFileName = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
+            this.pgbProgess = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -180,7 +181,7 @@
             this.lvwFiles.FullRowSelect = true;
             this.lvwFiles.Location = new System.Drawing.Point(367, 71);
             this.lvwFiles.Name = "lvwFiles";
-            this.lvwFiles.Size = new System.Drawing.Size(828, 345);
+            this.lvwFiles.Size = new System.Drawing.Size(828, 386);
             this.lvwFiles.TabIndex = 18;
             this.lvwFiles.UseCompatibleStateImageBehavior = false;
             this.lvwFiles.View = System.Windows.Forms.View.Details;
@@ -280,11 +281,20 @@
             this.txtFileName.Size = new System.Drawing.Size(166, 20);
             this.txtFileName.TabIndex = 25;
             // 
+            // pgbProgess
+            // 
+            this.pgbProgess.Location = new System.Drawing.Point(680, 463);
+            this.pgbProgess.Name = "pgbProgess";
+            this.pgbProgess.Size = new System.Drawing.Size(185, 23);
+            this.pgbProgess.TabIndex = 26;
+            this.pgbProgess.Visible = false;
+            // 
             // YetAnotherFileFinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 515);
+            this.Controls.Add(this.pgbProgess);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.dtpDateModif);
@@ -344,6 +354,7 @@
         private System.Windows.Forms.ColumnHeader FilePath;
         private System.Windows.Forms.Label lblFileName;
         public System.Windows.Forms.TextBox txtFileName;
+        public System.Windows.Forms.ProgressBar pgbProgess;
     }
 }
 
