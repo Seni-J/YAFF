@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
-using System.Linq;
+using Spire.Doc;
+using Spire.Doc.Documents;
 
 /*
  * CHANGER
@@ -20,7 +21,9 @@ namespace YetAnotherFileFinder.Class
     {
         string filename;
         string keyWord;
+        string filePath;
         string date;
+        string[] extension;
         string author;
 
         //As the 3 fields can be filled, We need to put them in a string so we can use them later on.
@@ -38,6 +41,11 @@ namespace YetAnotherFileFinder.Class
             {
                 author = yaffFilter.txtAuthor.Text;
             }
+            if (!string.IsNullOrEmpty(yaffFilter.txtKeyWord.Text))
+            {
+                keyWord = yaffFilter.txtKeyWord.Text;
+               
+            }
         }
 
         public void SearchWithFilter(YetAnotherFileFinder yaffFilter)
@@ -52,6 +60,46 @@ namespace YetAnotherFileFinder.Class
                     }
                 }
             }
+           else if(keyWord != null)
+            {
+                foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
+                {
+                    filePath = file.SubItems[1].Text;
+                    extension = file.Text.Split('.');
+                   
+                    switch(extension[1])
+                    {
+                        case "doc":
+                        case "docx":
+                            if (file.Text.Contains("~"){
+
+                            }
+                            Document document = new Document();
+                            document.LoadFromFile(filePath + "/" + file.Text);
+                            StringBuilder sb = new StringBuilder();
+                            foreach (Section section in document.Sections)
+                            {
+                                foreach (Paragraph paragraph in section.Paragraphs)
+                                {
+                                    sb.AppendLine(paragraph.Text);
+                                }
+                                if(!sb.ToString().Contains(keyWord))
+                                {
+                                    yaffFilter.lvwFiles.Items.Remove(file);
+                                }
+                            }
+
+                                break;
+                        default:
+                            yaffFilter.lvwFiles.Items.Remove(file);
+                            break;
+                    }
+                   
+
+                    
+                }
+            }
+            
         } 
     }
 }
