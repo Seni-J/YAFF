@@ -19,17 +19,14 @@ namespace YetAnotherFileFinder.Class
 {
     class Files
     {
-        protected string finalPath;
-        //TEST
-
         //Get the files from a selected drive or folder.
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
         {
-            
+            yaffParentForm.lvwFiles.BeginUpdate();
             DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.*"); //Getting Text files
             DirectoryInfo[] Directories = d.GetDirectories("*"); 
-            string str = "";
+
             foreach (FileInfo file in Files)
             {
                 var lastModified = File.GetLastWriteTime(path + "/" + file.Name);
@@ -41,7 +38,6 @@ namespace YetAnotherFileFinder.Class
                 lvi.SubItems.Add(user.ToString());
                 lvi.SubItems.Add(lastModified.ToString());
                 
-                //lvi.SubItems.Add(file.Name);
                 yaffParentForm.lvwFiles.Items.Add(lvi);
                
             }
@@ -49,6 +45,7 @@ namespace YetAnotherFileFinder.Class
             {
                 GetFilesFromSelectedDrive(yaffParentForm, path + "/" + Directory.Name);
             }
+            yaffParentForm.lvwFiles.EndUpdate();
            
         }
        
