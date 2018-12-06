@@ -46,14 +46,6 @@ namespace YetAnotherFileFinder
 
         }
 
-        //Debug button
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            MessageBox.Show(dtpDateModif.ToString());
-        }
-
-
         private void btnResearch_Click(object sender, EventArgs e)
         {
             if(selectedDrive != null) { 

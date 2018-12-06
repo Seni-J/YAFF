@@ -51,7 +51,6 @@
             this.lblSelectFolderFromDrive = new System.Windows.Forms.Label();
             this.btnSelectFFD = new System.Windows.Forms.Button();
             this.fbdFolderLookup = new System.Windows.Forms.FolderBrowserDialog();
-            this.button1 = new System.Windows.Forms.Button();
             this.dtpDateModif = new System.Windows.Forms.DateTimePicker();
             this.lblFileName = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
@@ -245,16 +244,6 @@
             this.btnSelectFFD.UseVisualStyleBackColor = true;
             this.btnSelectFFD.Click += new System.EventHandler(this.btnSelectFFD_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(368, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Debug Button";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dtpDateModif
             // 
             this.dtpDateModif.CustomFormat = " ";
@@ -298,7 +287,6 @@
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.dtpDateModif);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSelectFFD);
             this.Controls.Add(this.lblSelectFolderFromDrive);
             this.Controls.Add(this.btnOpenFile);
@@ -341,7 +329,6 @@
         private System.Windows.Forms.Label lblSelectFolderFromDrive;
         private System.Windows.Forms.FolderBrowserDialog fbdFolderLookup;
         public System.Windows.Forms.Button btnSelectFFD;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListView lvwFiles;
         public System.Windows.Forms.TextBox txtKeyWord;
         public System.Windows.Forms.TextBox txtAuthor;
