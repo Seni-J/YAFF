@@ -7,7 +7,9 @@ using System.IO;
 using System.Windows.Forms;
 using Spire.Doc;
 using Spire.Doc.Documents;
-
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.parser;
+using Spire.Xls;
 /*
  * CHANGER
  * LES
@@ -67,29 +69,82 @@ namespace YetAnotherFileFinder.Class
                     filePath = file.SubItems[1].Text;
                     extension = file.Text.Split('.');
                    
-                    switch(extension[1])
+                    switch(extension.Last())
                     {
+                        case "txt":
+
+                            StreamReader sr = new StreamReader(filePath + "/" + file.Text);
+                          
+                            String txtstring = sr.ReadToEnd();
+                            if (txtstring.Contains(keyWord))
+                            {
+                                yaffFilter.lvwFiles.Items.Remove(file);
+                            }
+
+                            break;
                         case "doc":
                         case "docx":
-                            if (file.Text.Contains("~"){
-
+                            if (!file.Text.Contains("~")){
+                                Document document = new Document();
+                                document.LoadFromFile(filePath + "/" + file.Text);
+                                StringBuilder sbdoc = new StringBuilder();
+                                foreach (Section section in document.Sections)
+                                {
+                                    foreach (Paragraph paragraph in section.Paragraphs)
+                                    {
+                                        sbdoc.AppendLine(paragraph.Text);
+                                    }
+                                    if (!sbdoc.ToString().Contains(keyWord))
+                                    {
+                                        yaffFilter.lvwFiles.Items.Remove(file);
+                                    }
+                                }
                             }
-                            Document document = new Document();
-                            document.LoadFromFile(filePath + "/" + file.Text);
-                            StringBuilder sb = new StringBuilder();
-                            foreach (Section section in document.Sections)
+                            break;
+                        case "pdf":
+
+                            StringBuilder text = new StringBuilder();
+                            PdfReader pdfReader = new PdfReader(filePath + "/" + file.Text);
+
+                            for (int page = 1; page <= pdfReader.NumberOfPages; page++)
                             {
-                                foreach (Paragraph paragraph in section.Paragraphs)
-                                {
-                                    sb.AppendLine(paragraph.Text);
-                                }
-                                if(!sb.ToString().Contains(keyWord))
-                                {
-                                    yaffFilter.lvwFiles.Items.Remove(file);
-                                }
-                            }
+                                ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
+                                string currentText = PdfTextExtractor.GetTextFromPage(pdfReader, page, strategy);
 
-                                break;
+                                currentText = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(currentText)));
+                                text.Append(currentText);
+                            }
+                            pdfReader.Close();
+
+                            if (!text.ToString().Contains(keyWord))
+                            {
+                                yaffFilter.lvwFiles.Items.Remove(file);
+                            }
+                            break;
+                        case "xls":
+                        case "xlsx":
+                            Workbook workbook = new Workbook();
+                            workbook.LoadFromFile(filePath + "/" + file.Text);
+
+                            //find and highlight excel data
+                            
+                            
+                            int countWordInExcel = 0;
+                         
+                            foreach(Worksheet ws in workbook.Worksheets)
+                            {
+                                foreach (CellRange range in ws.FindAllString(keyWord.ToLower(), true, true))
+                                {
+                                    countWordInExcel++;
+                                }
+                                
+                            }
+                            if (countWordInExcel == 0)
+                            {
+                                yaffFilter.lvwFiles.Items.Remove(file);
+                            }
+                            break;
+
                         default:
                             yaffFilter.lvwFiles.Items.Remove(file);
                             break;
