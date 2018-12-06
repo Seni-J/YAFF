@@ -47,6 +47,7 @@ namespace YetAnotherFileFinder.Class
 
         public void SearchWithFilter(YetAnotherFileFinder yaffFilter)
         {
+            yaffFilter.lvwFiles.BeginUpdate();
             int listcount = yaffFilter.lvwFiles.Items.Count;
             yaffFilter.pgbProgess.Value = 0;
             yaffFilter.pgbProgess.Maximum = listcount;
@@ -172,7 +173,8 @@ namespace YetAnotherFileFinder.Class
                         continue;
                     }
                 }
-            } 
+            }
+            yaffFilter.lvwFiles.EndUpdate();
         }
 
         public void ResetFilters()
