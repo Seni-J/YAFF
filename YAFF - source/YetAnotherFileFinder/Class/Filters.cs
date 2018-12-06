@@ -79,7 +79,7 @@ namespace YetAnotherFileFinder.Class
                             StreamReader sr = new StreamReader(filePath + "/" + file.Text);
 
                             String txtstring = sr.ReadToEnd();
-                            if (txtstring.Contains(keyWord))
+                            if (!txtstring.ToUpper().Contains(keyWord.ToUpper()))
                             {
                                 yaffFilter.lvwFiles.Items.Remove(file);
                                 continue;
@@ -99,7 +99,7 @@ namespace YetAnotherFileFinder.Class
                                     {
                                         sbdoc.AppendLine(paragraph.Text);
                                     }
-                                    if (!sbdoc.ToString().Contains(keyWord))
+                                    if (!sbdoc.ToString().ToUpper().Contains(keyWord.ToUpper()))
                                     {
                                         yaffFilter.lvwFiles.Items.Remove(file);
                                         continue;
@@ -122,7 +122,7 @@ namespace YetAnotherFileFinder.Class
                             }
                             pdfReader.Close();
 
-                            if (!text.ToString().Contains(keyWord))
+                            if (!text.ToString().ToUpper().Contains(keyWord.ToUpper()))
                             {
                                 yaffFilter.lvwFiles.Items.Remove(file);
                                 continue;
