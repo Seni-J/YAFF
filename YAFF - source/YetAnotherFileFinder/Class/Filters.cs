@@ -25,7 +25,6 @@ namespace YetAnotherFileFinder.Class
         DateTime? date = null;
         string keyWord;
         string filePath;
-        string date;
         string[] extension;
         string author;
 
@@ -68,30 +67,29 @@ namespace YetAnotherFileFinder.Class
                         continue;
                     }
                 }
-            }
-           else if(keyWord != null)
-            {
-                foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
+                if (keyWord != null)
                 {
-                    filePath = file.SubItems[1].Text;
-                    extension = file.Text.Split('.');
-                   
-                    switch(extension.Last())
+                        filePath = file.SubItems[1].Text;
+                        extension = file.Text.Split('.');
+
+                    switch (extension.Last())
                     {
                         case "txt":
 
                             StreamReader sr = new StreamReader(filePath + "/" + file.Text);
-                          
+
                             String txtstring = sr.ReadToEnd();
                             if (txtstring.Contains(keyWord))
                             {
                                 yaffFilter.lvwFiles.Items.Remove(file);
+                                continue;
                             }
 
                             break;
                         case "doc":
                         case "docx":
-                            if (!file.Text.Contains("~")){
+                            if (!file.Text.Contains("~"))
+                            {
                                 Document document = new Document();
                                 document.LoadFromFile(filePath + "/" + file.Text);
                                 StringBuilder sbdoc = new StringBuilder();
@@ -104,6 +102,7 @@ namespace YetAnotherFileFinder.Class
                                     if (!sbdoc.ToString().Contains(keyWord))
                                     {
                                         yaffFilter.lvwFiles.Items.Remove(file);
+                                        continue;
                                     }
                                 }
                             }
@@ -126,6 +125,7 @@ namespace YetAnotherFileFinder.Class
                             if (!text.ToString().Contains(keyWord))
                             {
                                 yaffFilter.lvwFiles.Items.Remove(file);
+                                continue;
                             }
                             break;
                         case "xls":
@@ -134,35 +134,31 @@ namespace YetAnotherFileFinder.Class
                             workbook.LoadFromFile(filePath + "/" + file.Text);
 
                             //find and highlight excel data
-                            
-                            
+
+
                             int countWordInExcel = 0;
-                         
-                            foreach(Worksheet ws in workbook.Worksheets)
+
+                            foreach (Worksheet ws in workbook.Worksheets)
                             {
                                 foreach (CellRange range in ws.FindAllString(keyWord.ToLower(), true, true))
                                 {
                                     countWordInExcel++;
                                 }
-                                
+
                             }
                             if (countWordInExcel == 0)
                             {
                                 yaffFilter.lvwFiles.Items.Remove(file);
+                                continue;
                             }
                             break;
 
                         default:
                             yaffFilter.lvwFiles.Items.Remove(file);
-                            break;
+                            continue;
                     }
-                   
-
-                    
                 }
-            }
-            
-        } 
+
                 if (date != null)
                 {
                     string path = file.SubItems[1].Text + "/" + file.Text;
