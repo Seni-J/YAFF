@@ -42,6 +42,7 @@ namespace YetAnotherFileFinder.Class
         public void SearchWithFilter(YetAnotherFileFinder yaffFilter)
         {
             int listcount = yaffFilter.lvwFiles.Items.Count;
+            yaffFilter.pgbProgess.Value = 0;
             yaffFilter.pgbProgess.Maximum = listcount;
             yaffFilter.pgbProgess.Visible = true;
             foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
