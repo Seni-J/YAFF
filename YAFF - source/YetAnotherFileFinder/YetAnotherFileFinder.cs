@@ -33,9 +33,16 @@ namespace YetAnotherFileFinder
         public void btnSelectFFD_Click(object sender, EventArgs e)
         {
             fbdFolderLookup.ShowDialog();
-            selectedDrive = fbdFolderLookup.SelectedPath;
-            lvwFiles.Items.Clear();
-            file.GetFilesFromSelectedDrive(this, selectedDrive);
+            if (fbdFolderLookup.SelectedPath == "")
+            {
+                MessageBox.Show("Veuillez sélectionner un répertoire.", "Répertoire non sélectionnée.");
+            }
+            else
+            {
+                selectedDrive = fbdFolderLookup.SelectedPath;
+                lvwFiles.Items.Clear();
+                file.GetFilesFromSelectedDrive(this, selectedDrive);
+            }
 
         }
 

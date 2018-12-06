@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using Spire.Doc;
@@ -11,10 +9,7 @@ using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
 using Spire.Xls;
 /*
- * CHANGER
- * LES
- * TYPES VOIDS
- * MERCI
+ * Class Filters.cs
  */
 
 namespace YetAnotherFileFinder.Class
