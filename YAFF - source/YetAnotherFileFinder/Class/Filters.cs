@@ -19,8 +19,7 @@ namespace YetAnotherFileFinder.Class
     class Filters
     {
         string filename;
-        string keyWord;
-        string date;
+        DateTime? date = null;
         string author;
 
         //As the 3 fields can be filled, We need to put them in a string so we can use them later on.
@@ -30,9 +29,9 @@ namespace YetAnotherFileFinder.Class
             {
                 filename = yaffFilter.txtFileName.Text;
             }
-            if (!string.IsNullOrEmpty(yaffFilter.dtpDateModif.Text))
+            if (yaffFilter.dtpDateModif.Text != " ")
             {
-                date = yaffFilter.dtpDateModif.Text;
+                date = yaffFilter.dtpDateModif.Value.Date;
             }
             if (!string.IsNullOrEmpty(yaffFilter.txtAuthor.Text))
             {
@@ -42,16 +41,47 @@ namespace YetAnotherFileFinder.Class
 
         public void SearchWithFilter(YetAnotherFileFinder yaffFilter)
         {
-            if (filename != null)
+            int listcount = yaffFilter.lvwFiles.Items.Count;
+            yaffFilter.pgbProgess.Maximum = listcount;
+            yaffFilter.pgbProgess.Visible = true;
+            foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
             {
-                foreach (ListViewItem file in yaffFilter.lvwFiles.Items)
+                yaffFilter.pgbProgess.Value += 1;
+                if (filename != null)
                 {
                     if (!file.Text.ToUpper().Contains(filename.ToUpper()))
                     {
                         yaffFilter.lvwFiles.Items.Remove(file);
+                        continue;
                     }
                 }
-            }
-        } 
+                if (date != null)
+                {
+                    string path = file.SubItems[1].Text + "/" + file.Text;
+                    string[] dateNoTime = date.ToString().Split(' ');
+                    if (!file.SubItems[4].Text.Contains(dateNoTime[0]))
+                    {
+                        yaffFilter.lvwFiles.Items.Remove(file);
+                        continue;
+                    }
+                }
+                if (author != null)
+                {
+                    if (!file.SubItems[3].Text.ToUpper().Contains(author.ToUpper()))
+                    {
+                        yaffFilter.lvwFiles.Items.Remove(file);
+                        continue;
+                    }
+                }
+            } 
+        }
+
+        public void ResetFilters()
+        {
+            filename = null;
+            date = null;
+            author = null;
+        }
+       
     }
 }
