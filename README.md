@@ -19,7 +19,7 @@ Télechargez l'exécutable disponible dans le dossier "Rendu". Exécuter pour po
 ## Installation du projet
 
 - Clonez le projet Github.
-- Lancez le projet sur Visual Studio.
+- Lancez la solution dans le dossier "YAFF - source" sur Visual Studio.
 
 ## Projet fait avec
 
