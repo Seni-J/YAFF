@@ -174,6 +174,7 @@ namespace YetAnotherFileFinder.Class
                     }
                 }
             }
+            yaffFilter.pgbProgess.Visible = false;
             yaffFilter.lvwFiles.EndUpdate();
         }
 

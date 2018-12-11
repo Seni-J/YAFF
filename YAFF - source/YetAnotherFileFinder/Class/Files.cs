@@ -19,6 +19,16 @@ namespace YetAnotherFileFinder.Class
 {
     class Files
     {
+        public void LoadFolderInExplorer(string selectedPath)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                Arguments = selectedPath,
+                FileName = "explorer.exe"
+            };
+            Process.Start(startInfo);
+        }
+
         //Get the files from a selected drive or folder.
         public void GetFilesFromSelectedDrive(YetAnotherFileFinder yaffParentForm,string path)
         {
@@ -47,10 +57,6 @@ namespace YetAnotherFileFinder.Class
             }
             yaffParentForm.lvwFiles.EndUpdate();
            
-        }
-       
-
-        public void ConvertFile(){
         }
 
         //Read the file with the associated program (associated program is fixed in the registry).

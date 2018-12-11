@@ -14,7 +14,6 @@ namespace YetAnotherFileFinder
 {
     public partial class YetAnotherFileFinder : Form
     {
-        Class.Drives drive = new Class.Drives();
         Class.Files file = new Class.Files();
         Class.Filters filter = new Class.Filters();
         
@@ -56,26 +55,6 @@ namespace YetAnotherFileFinder
 
         }
 
-        private void btnResearch_Click(object sender, EventArgs e)
-        {
-            if(selectedDrive != null) { 
-                // Check if a field has been set. Otherwise, there's a message box telling to the user that he have to put something. If a space is typed, it's like the field is not null.
-                if(string.IsNullOrEmpty(txtAuthor.Text) && string.IsNullOrEmpty(txtKeyWord.Text) && string.IsNullOrEmpty(dtpDateModif.Text))
-                {
-                    MessageBox.Show("Veuillez compléter un des champs pour faire une recherche avancée.","Champ(s) manquant(s).");
-                }
-                else
-                {
-                    
-                    filter.CheckFilter(this);
-                    filter.SearchWithFilter(this);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Aucun répértoire n'a été séléctionné.");
-            }
-        }
 
         // Cancel button. Clear all the fields.
         private void btnCancel_Click(object sender, EventArgs e)
@@ -121,7 +100,7 @@ namespace YetAnotherFileFinder
             }
             else
             {
-                drive.LoadFolderInExplorer(lvwFiles.SelectedItems[0].SubItems[1].Text);
+                file.LoadFolderInExplorer(lvwFiles.SelectedItems[0].SubItems[1].Text);
             }
         }
 
@@ -137,6 +116,38 @@ namespace YetAnotherFileFinder
             else
             {
                 file.ReadFile(lvwFiles.SelectedItems[0].SubItems[1].Text + "/" + lvwFiles.SelectedItems[0].Text);   
+            }
+        }
+
+        private void pctLoupe_Click(object sender, EventArgs e)
+        {
+            Research();
+        }
+
+        private void btnResearch_Click(object sender, EventArgs e)
+        {
+            Research();
+        }
+
+        private void Research()
+        {
+            if (selectedDrive != null)
+            {
+                // Check if a field has been set. Otherwise, there's a message box telling to the user that he have to put something. If a space is typed, it's like the field is not null.
+                if (string.IsNullOrEmpty(txtFileName.Text) && string.IsNullOrEmpty(txtAuthor.Text) && string.IsNullOrEmpty(txtKeyWord.Text) && string.IsNullOrEmpty(dtpDateModif.Text))
+                {
+                    MessageBox.Show("Veuillez compléter un des champs pour faire une recherche avancée.", "Champ(s) manquant(s).");
+                }
+                else
+                {
+
+                    filter.CheckFilter(this);
+                    filter.SearchWithFilter(this);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Aucun répértoire n'a été séléctionné.");
             }
         }
     }

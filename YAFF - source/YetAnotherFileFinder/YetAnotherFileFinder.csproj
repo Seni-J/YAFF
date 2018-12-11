@@ -83,7 +83,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Drives.cs" />
     <Compile Include="Class\Files.cs" />
     <Compile Include="Class\Filters.cs" />
     <Compile Include="splashscreen.cs">
