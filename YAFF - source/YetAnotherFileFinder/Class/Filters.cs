@@ -182,6 +182,7 @@ namespace YetAnotherFileFinder.Class
             filename = null;
             date = null;
             author = null;
+            keyWord = null;
         }
        
     }

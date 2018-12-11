@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YetAnotherFileFinder));
             this.lblSelectDriveHeader = new System.Windows.Forms.Label();
             this.lblInfoFiles = new System.Windows.Forms.Label();
             this.lblResearch = new System.Windows.Forms.Label();
@@ -304,6 +305,7 @@
             this.Controls.Add(this.lblInfoFiles);
             this.Controls.Add(this.lblSelectDriveHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "YetAnotherFileFinder";
             this.Text = "YAFF - Yet Another File Finder";
