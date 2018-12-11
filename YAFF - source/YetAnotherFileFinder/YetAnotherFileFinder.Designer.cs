@@ -127,9 +127,9 @@
             // 
             // btnResearch
             // 
-            this.btnResearch.Location = new System.Drawing.Point(49, 464);
+            this.btnResearch.Location = new System.Drawing.Point(35, 464);
             this.btnResearch.Name = "btnResearch";
-            this.btnResearch.Size = new System.Drawing.Size(75, 23);
+            this.btnResearch.Size = new System.Drawing.Size(96, 23);
             this.btnResearch.TabIndex = 8;
             this.btnResearch.Text = "Rechercher";
             this.btnResearch.UseVisualStyleBackColor = true;
@@ -137,12 +137,13 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(181, 463);
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Location = new System.Drawing.Point(224, 463);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(109, 23);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Annuler";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnRepo
@@ -189,27 +190,27 @@
             // FilesName
             // 
             this.FilesName.Text = "Nom";
-            this.FilesName.Width = 187;
+            this.FilesName.Width = 122;
             // 
             // FilePath
             // 
-            this.FilePath.Text = "Path";
-            this.FilePath.Width = 137;
+            this.FilePath.Text = "Chemin";
+            this.FilePath.Width = 254;
             // 
             // Size
             // 
-            this.Size.Text = "Size";
-            this.Size.Width = 110;
+            this.Size.Text = "Taille";
+            this.Size.Width = 107;
             // 
             // Author
             // 
-            this.Author.Text = "Author";
-            this.Author.Width = 199;
+            this.Author.Text = "Auteur";
+            this.Author.Width = 123;
             // 
             // ModificationDate
             // 
-            this.ModificationDate.Text = "Last modification date";
-            this.ModificationDate.Width = 116;
+            this.ModificationDate.Text = "Date de modification";
+            this.ModificationDate.Width = 251;
             // 
             // FileName
             // 
@@ -283,7 +284,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 515);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(1220, 523);
             this.Controls.Add(this.pgbProgess);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.lblFileName);
@@ -308,6 +310,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "YetAnotherFileFinder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YAFF - Yet Another File Finder";
             this.Load += new System.EventHandler(this.YetAnotherFileFinder_Load);
             this.ResumeLayout(false);

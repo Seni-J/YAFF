@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace YetAnotherFileFinder
 {
@@ -22,7 +23,16 @@ namespace YetAnotherFileFinder
 
         public YetAnotherFileFinder()
         {
+            Thread t = new Thread(new ThreadStart(SplashStart));
+            t.Start();
+            Thread.Sleep(2000);
+            t.Abort();
             InitializeComponent();
+            
+        }
+        public void SplashStart()
+        {
+            Application.Run(new splashscreen());
         }
 
         private void YetAnotherFileFinder_Load(object sender, EventArgs e)

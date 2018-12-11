@@ -86,6 +86,12 @@
     <Compile Include="Class\Drives.cs" />
     <Compile Include="Class\Files.cs" />
     <Compile Include="Class\Filters.cs" />
+    <Compile Include="splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashscreen.Designer.cs">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="YetAnotherFileFinder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="splashscreen.resx">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YetAnotherFileFinder.resx">
       <DependentUpon>YetAnotherFileFinder.cs</DependentUpon>
     </EmbeddedResource>
