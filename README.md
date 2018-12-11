@@ -1,7 +1,9 @@
+<div align="center">
 # YAFF
 
 YAFF ou Yet Another File Finder.
 
+</div>
 ## Introduction
 
 YAFF est une application permettant à l'utilisateur de sélectionner un répertoire ou un lecteur (que ça soit local ou sur le réseau) et de pouvoir rechercher un fichier par le nom du fichier, un mot-clé, une date ou l'auteur du fichier. Il peut aussi combiner les recherches. Une fois son fichier retrouvé, il peut, en sélectionnant le fichier, de soit ouvrir le répertoire soit d'ouvrir le fichier avec une application de base.
