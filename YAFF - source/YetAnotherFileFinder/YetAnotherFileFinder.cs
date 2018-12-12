@@ -24,14 +24,14 @@ namespace YetAnotherFileFinder
         {
             Thread t = new Thread(new ThreadStart(SplashStart));
             t.Start();
-            Thread.Sleep(2000);
-            t.Abort();
             InitializeComponent();
-            
+            Thread.Sleep(1000);
+            t.Abort();
         }
         public void SplashStart()
         {
-            Application.Run(new splashscreen());
+            splashscreen splashscreenfrm = new splashscreen();
+            Application.Run(splashscreenfrm);
         }
 
         private void YetAnotherFileFinder_Load(object sender, EventArgs e)
