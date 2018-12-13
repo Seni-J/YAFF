@@ -28,7 +28,7 @@ D’autres fonctionnalités peuvent être ajoutés suivant l’avancement du pro
 
 ## Documentation
 
-La documentation a été écrite au format markdown et est disponible sur [Gitbook](https://yaff.gitbook.io/project/~/edit/drafts/-LTSDCHxHPiiqW_5XEIP/yet-another-file-finder/introduction).
+La documentation a été écrite au format markdown et est disponible sur [Gitbook](https://yaff.gitbook.io/project/).
 
 ## Liens externes
 
