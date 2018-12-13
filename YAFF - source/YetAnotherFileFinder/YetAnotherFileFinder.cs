@@ -10,6 +10,17 @@ using System.IO;
 using System.Windows.Forms;
 using System.Threading;
 
+/*
+ * Form YetAnotherFileFinder
+ * 
+ * This is where we call methods from the class Files and the class Filters for each button. 
+ *  
+ * Authors: Senistan Jegarajasingam and Jarod Streckeisen.
+ * Version: 1.0
+ * Updated date: 13 December 2018
+ */
+
+
 namespace YetAnotherFileFinder
 {
     public partial class YetAnotherFileFinder : Form
@@ -22,44 +33,75 @@ namespace YetAnotherFileFinder
 
         public YetAnotherFileFinder()
         {
+            //Call the splashscreen form in a thread. After 1.5s, we close the splashscreen form.
             Thread t = new Thread(new ThreadStart(SplashStart));
             t.Start();
+            Thread.Sleep(1500);
             InitializeComponent();
-            Thread.Sleep(1000);
             t.Abort();
         }
+
+        //Method to start the splashscreen.
         public void SplashStart()
         {
             splashscreen splashscreenfrm = new splashscreen();
             Application.Run(splashscreenfrm);
         }
 
+        // On the load, we set the custom format so we won't have an error on research. We also activate the form so this form won't minimize after the splashscreen.
         private void YetAnotherFileFinder_Load(object sender, EventArgs e)
         {
+            this.Activate();
             dtpDateModif.CustomFormat = " ";
         }
 
-        public void btnSelectFFD_Click(object sender, EventArgs e)
+        // Check if a value as been selected for the calendar. If the selected date is compliant, we set a custom format for it.
+        private void dtpDateModif_ValueChanged(object sender, EventArgs e)
         {
-            fbdFolderLookup.ShowDialog();
-            if (fbdFolderLookup.SelectedPath == "")
+            if(dtpDateModif.Value.Date > DateTime.Today)
             {
-                MessageBox.Show("Veuillez sélectionner un répertoire.", "Répertoire non sélectionnée.");
+                dtpDateModif.CustomFormat = " ";
+                MessageBox.Show("Vous ne pouvez pas sélectionner une date ultérieure.");
             }
             else
             {
-                selectedDrive = fbdFolderLookup.SelectedPath;
-                lvwFiles.Items.Clear();
-                file.GetFilesFromSelectedDrive(this, selectedDrive);
+                dtpDateModif.CustomFormat = "dd-MM-yyyy";
             }
-
         }
 
+        // Open the folder button. The repository of the selected file in the listview will be opened.
+        private void btnRepo_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(selectedDrive)) {
+                MessageBox.Show("Aucun répertoire n'a été sélectionné.");
+            }
+            else
+            {
+                file.LoadFolderInExplorer(lvwFiles.SelectedItems[0].SubItems[1].Text);
+            }
+        }
 
-        // Cancel button. Clear all the fields.
+        // Open the file button. The selected file in the listview will be opened.
+        private void btnOpenFile_Click(object sender, EventArgs e)
+        {
+            selectedFile = lvwFiles.SelectedItems[0].Text;
+            if (string.IsNullOrEmpty(selectedDrive))
+            {
+                MessageBox.Show("Aucun répertoire n'a été sélectionné.");
+            }else if (string.IsNullOrEmpty(selectedDrive)){
+                MessageBox.Show("Aucun fichier n'a été sélectionné.");
+            }
+            else
+            {
+                file.ReadFile(lvwFiles.SelectedItems[0].SubItems[1].Text + "/" + lvwFiles.SelectedItems[0].Text);   
+            }
+        }
+
+        // Cancel button. Clear all the fields when the button is clicked.
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if(selectedDrive != null) { 
+            if (selectedDrive != null)
+            {
                 txtAuthor.Clear();
                 txtKeyWord.Clear();
                 txtFileName.Clear();
@@ -79,57 +121,25 @@ namespace YetAnotherFileFinder
             }
         }
 
-        // Check if a value as been selected for the calendar.
-        private void dtpDateModif_ValueChanged(object sender, EventArgs e)
+        // Select a folder button. When the button is clicked, a folder lookup form shows up and you have to select a folder. If you don't select anything, there's an error message showing up.
+        public void btnSelectFFD_Click(object sender, EventArgs e)
         {
-            if(dtpDateModif.Value.Date > DateTime.Today)
+            fbdFolderLookup.ShowDialog();
+            if (fbdFolderLookup.SelectedPath == "")
             {
-                dtpDateModif.CustomFormat = " ";
-                MessageBox.Show("Vous ne pouvez pas sélectionner une date ultérieure.");
+                MessageBox.Show("Veuillez sélectionner un répertoire.", "Répertoire non sélectionnée.");
             }
             else
             {
-                dtpDateModif.CustomFormat = "dd-MM-yyyy";
+                selectedDrive = fbdFolderLookup.SelectedPath;
+                lvwFiles.Items.Clear();
+                file.GetFilesFromSelectedDrive(this, selectedDrive);
             }
+
         }
 
-        private void btnRepo_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(selectedDrive)) {
-                MessageBox.Show("Aucun répertoire n'a été sélectionné.");
-            }
-            else
-            {
-                file.LoadFolderInExplorer(lvwFiles.SelectedItems[0].SubItems[1].Text);
-            }
-        }
-
-        private void btnOpenFile_Click(object sender, EventArgs e)
-        {
-            selectedFile = lvwFiles.SelectedItems[0].Text;
-            if (string.IsNullOrEmpty(selectedDrive))
-            {
-                MessageBox.Show("Aucun répertoire n'a été sélectionné.");
-            }else if (string.IsNullOrEmpty(selectedDrive)){
-                MessageBox.Show("Aucun fichier n'a été sélectionné.");
-            }
-            else
-            {
-                file.ReadFile(lvwFiles.SelectedItems[0].SubItems[1].Text + "/" + lvwFiles.SelectedItems[0].Text);   
-            }
-        }
-
-        private void pctLoupe_Click(object sender, EventArgs e)
-        {
-            Research();
-        }
-
+        // Research button. This button check if input filters as been set. If so, we will call the method to check if the file contains the looking field(s).
         private void btnResearch_Click(object sender, EventArgs e)
-        {
-            Research();
-        }
-
-        private void Research()
         {
             if (selectedDrive != null)
             {

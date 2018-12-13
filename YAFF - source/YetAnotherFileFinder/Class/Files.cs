@@ -8,10 +8,13 @@ using System.Windows.Forms;
 using System.Diagnostics;
 
 /*
- * CHANGER
- * LES
- * TYPES VOIDS
- * MERCI
+ * Class Files.cs
+ * 
+ * This class is used to load the files in the listview and to get the folder where we have to look in. 
+ * 
+ * Authors: Senistan Jegarajasingam and Jarod Streckeisen.
+ * Version: 1.0
+ * Updated date: 13 December 2018
  */
 
 
@@ -19,6 +22,7 @@ namespace YetAnotherFileFinder.Class
 {
     class Files
     {
+        //Open the repository of the selected file in the listview. All we have to do is to call the ProcessStart to open explorer.exe.
         public void LoadFolderInExplorer(string selectedPath)
         {
             ProcessStartInfo startInfo = new ProcessStartInfo
