@@ -56,6 +56,7 @@
             this.lblFileName = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.pgbProgess = new System.Windows.Forms.ProgressBar();
+            this.lblCopyright = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSelectDriveHeader
@@ -338,6 +339,18 @@
             this.pgbProgess.TabIndex = 26;
             this.pgbProgess.Visible = false;
             // 
+            // lblCopyright
+            // 
+            this.lblCopyright.AutoSize = true;
+            this.lblCopyright.BackColor = System.Drawing.Color.Transparent;
+            this.lblCopyright.Font = new System.Drawing.Font("Roboto Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCopyright.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblCopyright.Location = new System.Drawing.Point(1123, 9);
+            this.lblCopyright.Name = "lblCopyright";
+            this.lblCopyright.Size = new System.Drawing.Size(85, 20);
+            this.lblCopyright.TabIndex = 27;
+            this.lblCopyright.Text = "© YAC - 2018";
+            // 
             // YetAnotherFileFinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +359,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1220, 523);
+            this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.pgbProgess);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.lblFileName);
@@ -408,6 +422,7 @@
         private System.Windows.Forms.Label lblFileName;
         public System.Windows.Forms.TextBox txtFileName;
         public System.Windows.Forms.ProgressBar pgbProgess;
+        private System.Windows.Forms.Label lblCopyright;
     }
 }
 

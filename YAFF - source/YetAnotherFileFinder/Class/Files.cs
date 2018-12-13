@@ -55,6 +55,7 @@ namespace YetAnotherFileFinder.Class
                 yaffParentForm.lvwFiles.Items.Add(lvi);
                
             }
+
             foreach (DirectoryInfo  Directory in Directories)
             {
                 GetFilesFromSelectedDrive(yaffParentForm, path + "/" + Directory.Name);
