@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Yet Another File Finder](README.md)
 
 ## DEVELOPER DOCUMENTATION
 

@@ -1,6 +1,8 @@
-# Introduction
+# Yet Another File Finder
 
-## Contexte
+![](.gitbook/assets/logo-yaff.png)
+
+## Introduction
 
 YAFF ou Yet Another File Finder est une application permettant à un utilisateur de rechercher un fichier dans un dossier et dans les sous-dossiers de ce dernier. La complexité de l’application est qu’elle est capable de lire dans les fichiers pour savoir si dans le fichier \(qui est lue par l’application\), le mot recherché est contenu. L’utilisateur a la possibilité de sélectionner le dossier ou le disque dur. Il a aussi la possibilité avant ou après la recherche d’un fichier de soit ouvrir son répertoire ou soit d’ouvrir le fichier directement en le sélectionnant.
 
