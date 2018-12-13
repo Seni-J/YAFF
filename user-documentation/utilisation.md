@@ -33,7 +33,7 @@ Le champ "Auteur" permet de trouver les fichiers selon leur auteur.
 
 ![](../.gitbook/assets/affichage.PNG)
 
-Une fois un lecteur/dossier sélectionner ou une recherche effectuée. Vous pouvez sélectionnez le dossier dans la liste et cliquez sur le bouton "Ouvrir le répertoire" pour ouvrir l'emplacement du fichier dans l'explorateur Windows ou cliquer sur le bouton "Ouvrir le fichier" pour ouvrir le fichier avec son programme par défaut. Par exemple : Microsoft Word pour un fichier "docx"
+Une fois un lecteur/dossier sélectionner ou une recherche effectuée. Vous pouvez sélectionnez le dossier dans la liste et cliquez sur le bouton "Ouvrir le répertoire" pour ouvrir l'emplacement du fichier dans l'explorateur Windows ou cliquer sur le bouton "Ouvrir le fichier" pour ouvrir le fichier avec son programme par défaut. Par exemple : Microsoft Word pour un fichier "docx".
 
 
 
