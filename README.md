@@ -18,7 +18,7 @@ L’objectif est de fournir une application de recherche de fichier rapide et op
 
 Les fonctionnalités demandées du programme sont les suivante :
 
-* Sélectionner un lecteur local ou réseau.
+* Sélectionner un lecteur local ou en réseau.
 * Afficher les dossiers / fichiers.
 * Faire une recherche selon un mot clef.
 * Faire une recherche selon l’auteur.
