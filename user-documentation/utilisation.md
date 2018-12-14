@@ -14,7 +14,7 @@ Cliquer sur le bouton "sélectionner" pour sélectionner un lecteur ou un dossie
 
 ![](../.gitbook/assets/recherche.PNG)
 
-Pour effectuer une recherche , remplissez 1 ou plusieurs champs. Cliquer sur le bouton "Rechercher" . Pour réinitialiser une rechercher , appuyer sur le bouton "Annuler"
+Pour effectuer une recherche , remplissez 1 ou plusieurs champs. Cliquer sur le bouton "Rechercher" . Pour réinitialiser une recherche , appuyer sur le bouton "Annuler"
 
 Le champ "Nom du fichier" permet de rechercher un fichier selon son nom ou son extension .  Exemple : "**cv**" ou "**docx**" 
 

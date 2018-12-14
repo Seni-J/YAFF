@@ -12,7 +12,7 @@ La maquette est constituée de 3 grandes parties :
 
 **En bleu** : l'affichage du résultat et l'interaction avec les fichiers. 
 
-## Structure
+## Structure / Architecture
 
 ![](../.gitbook/assets/structure2.PNG)
 
@@ -50,5 +50,5 @@ Cette classe contiens toutes les fonctions liés aux fichiers
 
 ## Planning
 
-Le planning du projet est sous forme d'un tableau trello disponible [ici](https://trello.com/b/jYtXQac9/yet-another-file-finder).
+Le planning du projet est sous forme d'un tableau Trello disponible [ici](https://trello.com/b/jYtXQac9/yet-another-file-finder).
 

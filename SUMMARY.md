@@ -8,6 +8,7 @@
 * [Installation](developer-documentation/installation.md)
 * [Conception](developer-documentation/conception.md)
 * [Réalisation](developer-documentation/realisation.md)
+* [Tests](developer-documentation/tests.md)
 
 ## USER DOCUMENTATION
 
