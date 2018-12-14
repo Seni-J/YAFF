@@ -2,9 +2,15 @@
 
 ## Problèmes rencontrés
 
+### Structure globale du projet
 
+Tout au long du projet , on était pas sur de la structure de notre projet. On a hésité entre plusieurs moyen de faire et on est arrivé à un résultat qui fonctionne mais qui n'est pas le plus optimisé
 
-## Solutions
+### Lecture dans les documents
+
+On a perdu énormément de temps à essayer de lire à l'intérieur des fichiers de la mauvaise manière. On à commencer par utiliser "interop" qui était pas du tout adapter à notre besoin.
+
+On c'est finalement tourner vers des petites librairies qui étaient beaucoup plus simple à utilisé.
 
 ## Bugs restants
 
@@ -16,9 +22,13 @@ Lorsque le chemin d'accès d'un dossier est plus grand que 255 caractères, l'ap
 
 Lorsqu'on fait une recherche à l’intérieur d'un fichier excel. Si le fichier excel contient une formule . L'application plante. Nous n'avons pas gérer l'erreur.
 
-### Ecran de chargement
+## Amélioration possible
 
-Lors du démarrage de l'application , après l'affichage de l’écran de chargement , l'application se met de temps en temps en arrière plan.
+* Refactorisation de certaines fonctions et/ou classes
+* Ajouter certains type de fichier à la recherche par mot clef comme par exemple : Les powerpoint ou les images
+* Améliorer la rapidité du programme
+* Le rendre compatible avec MacOS / Linux
+* Régler les bugs actuels. 
 
 
 
