@@ -11,7 +11,7 @@
 
 Concernant l'installation du projet pour les personnes voulant améliorer le projet, vous devez pour commencer par soit cloner le projet soit télécharger en format zip notre repo git.
 
-```
+```text
 git clone https://github.com/Seni-J/YAFF.git
 ```
 

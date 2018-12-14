@@ -14,7 +14,7 @@ On s'est finalement tourné vers des petites librairies qui étaient beaucoup pl
 
 ### Optimisation
 
-L'optimisation du projet n'a pas été simple à cause de l'implémentation effectuée au début. En effet, l'architecture qu'on avait imaginé n'était pas celle qu'on voulait et nous avons dû changer la structure après tout pour effacer des classes inutiles et réduire la taille du projet. Un autre problème était le temps de chargement de la liste qui prenait plus de 20 à 30 secondes pour plus de 10'000 fichiers. Nous avons réussi à régler le souci avec un workaround qui nous a permis de diviser ce temps de chargement par deux. 
+L'optimisation du projet n'a pas été simple à cause de l'implémentation effectuée au début. En effet, l'architecture qu'on avait imaginé n'était pas celle qu'on voulait et nous avons dû changer la structure après tout pour effacer des classes inutiles et réduire la taille du projet. Un autre problème était le temps de chargement de la liste qui prenait plus de 20 à 30 secondes pour plus de 10'000 fichiers. Nous avons réussi à régler le souci avec un workaround qui nous a permis de diviser ce temps de chargement par deux.
 
 ### Affichage de l'auteur
 
@@ -22,7 +22,7 @@ Un autre problème qui s'est posé durant le projet est l'auteur. Nous avons ess
 
 ## Bugs restants
 
-### Chemin d'accès trop long 
+### Chemin d'accès trop long
 
 Lorsque le chemin d'accès d'un dossier est plus grand que 255 caractères, l'application plante. C'est une erreur qui vient de Windows et que nous avons pas géré.
 
@@ -30,7 +30,7 @@ Lorsque le chemin d'accès d'un dossier est plus grand que 255 caractères, l'ap
 
 L'erreur peut être contourné en évitant d'essayer de lire si le chemin est plus grand que 255 caractères.
 
-### Lecture d'un fichier Excel 
+### Lecture d'un fichier Excel
 
 Lorsqu'on fait une recherche à l’intérieur d'un fichier Excel. Si le fichier Excel contient une certaine formule, L'application a des chances de planter. Nous n'avons pas géré l'erreur ni à le reproduire correctement.
 
@@ -42,7 +42,7 @@ N'ayant pas eu la chance de reproduire l'erreur, nous avons pas pu analyser enti
 
 ### Les droits sur les fichiers
 
-Certains fichiers sont inaccessibles à cause des droits utilisateurs \(fichiers systèmes\). Ce souci-là n'a pas été géré et peut causer le plantage de l'application. 
+Certains fichiers sont inaccessibles à cause des droits utilisateurs \(fichiers systèmes\). Ce souci-là n'a pas été géré et peut causer le plantage de l'application.
 
 #### Solution
 
@@ -73,6 +73,4 @@ Actuellement, nous avons mis à disposition la police mais ce n'est pas très op
 * Régler les bugs actuels. 
 * Quand rien n'est à afficher, mettre un pop up pour prévenir qu'il n'y avait rien dans le dossier.
 * Désactiver le bouton rechercher pour forcer l'utilisateur à réinitialiser les champs.
-
-
 

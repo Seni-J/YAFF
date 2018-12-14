@@ -6,7 +6,7 @@ Nous avons décidé de partir sur un langage applicatif et non avec une technolo
 
 ## Microsoft Visual Studio 2017
 
-Nous avons utilisé Visual Studio 2017 Entreprise pour développer notre application. Nous avons choisi cet IDE car l'équipe a pu déjà expérimenté le logiciel et qu'il est complet. 
+Nous avons utilisé Visual Studio 2017 Entreprise pour développer notre application. Nous avons choisi cet IDE car l'équipe a pu déjà expérimenté le logiciel et qu'il est complet.
 
 Version: 15.8.2
 
@@ -30,7 +30,7 @@ Version : 5.5.13
 
 ## Trello
 
-Nous avons utilisé la méthode AGILE durant le projet. Comme outil, nous avons choisi trello pour organiser le projet et mettre en place les sprint. 
+Nous avons utilisé la méthode AGILE durant le projet. Comme outil, nous avons choisi trello pour organiser le projet et mettre en place les sprint.
 
 [Lien du Trello](https://trello.com/b/jYtXQac9/yet-another-file-finder)
 
@@ -38,5 +38,5 @@ Nous avons utilisé la méthode AGILE durant le projet. Comme outil, nous avons 
 
 Nous avons utilisé Git pour le versioning ainsi que la possibilité de travailler individuellement sur une feature et ainsi merge ensemble. Nous avons utilisé le site Github pour gérer nos sources. Nous avons tout les deux utilisé GitKraken ou Github Desktop comme client.
 
-[Lien du repository Github](https://github.com/Seni-J/YAFF) 
+[Lien du repository Github](https://github.com/Seni-J/YAFF)
 

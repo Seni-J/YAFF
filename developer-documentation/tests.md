@@ -19,10 +19,7 @@ Voici les différents tests effectués :
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">
-        <p></p>
-        <p>Sélection d'un disque local</p>
-      </td>
+      <td style="text-align:left">Sélection d'un disque local</td>
       <td style="text-align:left">Fonctionnel</td>
       <td style="text-align:left"></td>
     </tr>
@@ -104,4 +101,3 @@ Voici les différents tests effectués :
     </tr>
   </tbody>
 </table>
-

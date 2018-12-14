@@ -12,5 +12,3 @@
 
 Pour la désinstallation, vous devez vous rendre dans "Ajouter ou supprimer des programmes" sur Windows 10 ou dans le panneau de contrôle sur Windows 7/8. Pour faciliter la recherche, le nom de l'application est "YAFF".
 
-
-
