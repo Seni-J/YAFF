@@ -6,13 +6,13 @@
 
 ### Sélectionner un lecteur
 
-![](../.gitbook/assets/lecteur.PNG)
+![](../.gitbook/assets/selectlect.PNG)
 
 Cliquer sur le bouton "sélectionner" pour sélectionner un lecteur ou un dossier dans le quel vous voulez rechercher un fichier.
 
 ### Rechercher
 
-![](../.gitbook/assets/recherche.PNG)
+![](../.gitbook/assets/recherche%20%281%29.PNG)
 
 Pour effectuer une recherche , remplissez 1 ou plusieurs champs. Cliquer sur le bouton "Rechercher" . Pour réinitialiser une recherche , appuyer sur le bouton "Annuler"
 
@@ -31,7 +31,7 @@ Le champ "Auteur" permet de trouver les fichiers selon leur auteur.
 
 ### Interaction avec les fichiers
 
-![](../.gitbook/assets/affichage.PNG)
+![](../.gitbook/assets/list.PNG)
 
 Une fois un lecteur/dossier sélectionner ou une recherche effectuée. Vous pouvez sélectionnez le dossier dans la liste et cliquez sur le bouton "Ouvrir le répertoire" pour ouvrir l'emplacement du fichier dans l'explorateur Windows ou cliquer sur le bouton "Ouvrir le fichier" pour ouvrir le fichier avec son programme par défaut. Par exemple : Microsoft Word pour un fichier "docx".
 

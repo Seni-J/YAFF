@@ -56,7 +56,13 @@ Si une date a été sélectionnée précédemment et que l'utilisateur veut choi
 
 Aucune solution n'a été trouvé à ce jour car nous n'avons pas plus investigué sur le problème.
 
+### Problème avec la police d'écriture
 
+Si la police d'écriture n'est pas installée sur l'ordinateur, le logiciel prend comme police de base Microsoft. Cela cause des problèmes pour les tailles.
+
+#### Solution
+
+Actuellement, nous avons mis à disposition la police mais ce n'est pas très optimale. Nous devons mettre en place la police dans le projet et l'appeler directement. Cependant, nous avons remarqué ce bug que bien tard.
 
 ## Améliorations possibles
 
