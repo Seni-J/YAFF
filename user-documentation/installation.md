@@ -8,6 +8,12 @@
 4. Une fois l'installation effectuée, lancez l'installateur.
 5. Après avoir installé le logiciel et la police, il sera disponible sur le bureau ou dans "YAFF" dans le menu démarrer.
 
+Il se peut que Windows ait le Windows Defender SmartScreen d'activé. Cela peut bloquer l'installation du logiciel.
+
+![](../.gitbook/assets/erreur.PNG)
+
+Pour contourner le problème, il faudra cliquer sur "Informations complémentaires" et un nouveau bouton apparaîtra. Il suffira de cliquer sur "Continuer quand même" pour procéder à l'installation.
+
 ## Désinstallation
 
 Pour la désinstallation, vous devez vous rendre dans "Ajouter ou supprimer des programmes" sur Windows 10 ou dans le panneau de contrôle sur Windows 7/8. Pour faciliter la recherche, le nom de l'application est "YAFF".
