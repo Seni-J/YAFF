@@ -24,9 +24,11 @@ Lorsque le chemin d'accès d'un dossier est plus grand que 255 caractères, l'ap
 
 ### Lecture d'un fichier Excel 
 
-Lorsqu'on fait une recherche à l’intérieur d'un fichier excel. Si le fichier excel contient une formule . L'application plante. Nous n'avons pas géré l'erreur.
+Lorsqu'on fait une recherche à l’intérieur d'un fichier Excel. Si le fichier Excel contient une certaine formule, L'application a des chances de planter. Nous n'avons pas géré l'erreur ni à le reproduire correctement.
 
-## Amélioration possible
+![](../.gitbook/assets/capture.PNG)
+
+## Améliorations possibles
 
 * Refactorisation de certaines fonctions et/ou classes.
 * Ajouter certains type de fichier à la recherche par mot clef comme par exemple : Les powerpoint ou les images.
