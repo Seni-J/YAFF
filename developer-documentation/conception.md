@@ -16,7 +16,7 @@ La maquette est constituée de 3 grandes parties :
 
 ![](../.gitbook/assets/structure2.PNG)
 
-La structure de notre application se décompose en 3 parties. l'interface, une classe Files et une classe Filter
+La structure de notre application se décompose en 3 parties. l'interface, une classe Files et une classe Filters
 
 ### Interface
 

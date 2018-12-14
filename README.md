@@ -6,11 +6,11 @@
 
 ## Introduction
 
-YAFF ou Yet Another File Finder est une application permettant à un utilisateur de rechercher un fichier dans un dossier et dans les sous-dossiers de ce dernier. La complexité de l’application est qu’elle est capable de lire dans les fichiers pour savoir si dans le fichier \(qui est lue par l’application\), le mot recherché est contenu. L’utilisateur a la possibilité de sélectionner le dossier ou le disque dur. Il a aussi la possibilité avant ou après la recherche d’un fichier de soit ouvrir son répertoire ou soit d’ouvrir le fichier directement en le sélectionnant.
+YAFF ou Yet Another File Finder est une application permettant à un utilisateur de rechercher un fichier dans un dossier et dans les sous-dossiers de ce dernier. La complexité de l’application réside dans le fait qu'elle doit être capable de lire le contenu de certains fichiers pour pouvoir le trouver lors d'une recherche. L’utilisateur a la possibilité de sélectionner un dossier ou un lecteur. 
 
-Cette application a été réalisé suite à la demande de Mr. Jérôme Chevillat qui est venu nous présenter le cahier des charges du projet.
+Cette application a été réalisée suite à la demande de Mr. Jérôme Chevillat qui est venu nous présenter le cahier des charges du projet.
 
-Pour ce projet, nous étions une équipe de deux techniciens en développement d’application, Senistan Jegarajasingam et Jarod Streckeisen. Nous avons dû gérer le projet \(planification/documentation\) ainsi que du développement de l’application. Notre équipe n’a jamais eu l’occasion de travailler sur un projet ressemblant au descriptif de celui-ci mais la technologie utilisée est connue.
+Pour ce projet, nous étions une équipe de deux techniciens en développement d’applications, Senistan Jegarajasingam et Jarod Streckeisen. Nous avons dû gérer le projet \(planification/documentation\) et développement de l’application. Notre équipe n’a jamais eu l’occasion de travailler sur un projet ressemblant au descriptif de celui-ci mais la technologie utilisée est connue.
 
 ## Objectifs
 

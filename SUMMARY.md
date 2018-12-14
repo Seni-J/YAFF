@@ -16,3 +16,7 @@
 * [Installation](user-documentation/installation.md)
 * [Utilisation](user-documentation/utilisation.md)
 
+## Annexes
+
+* [Cahier des charges](annexes/cahier-des-charges.md)
+
