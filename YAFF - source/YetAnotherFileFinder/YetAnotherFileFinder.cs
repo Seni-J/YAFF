@@ -17,7 +17,7 @@ using System.Threading;
  *  
  * Authors: Senistan Jegarajasingam and Jarod Streckeisen.
  * Version: 1.0
- * Updated date: 13 December 2018
+ * Updated date: 14 December 2018
  */
 
 
@@ -72,8 +72,18 @@ namespace YetAnotherFileFinder
         // Open the folder button. The repository of the selected file in the listview will be opened.
         private void btnRepo_Click(object sender, EventArgs e)
         {
+            //Check if a file has been selected in listview.
+            if (lvwFiles.SelectedItems.Count > 0)
+            {
+                selectedFile = lvwFiles.SelectedItems[0].Text;
+            }
+
             if (string.IsNullOrEmpty(selectedDrive)) {
                 MessageBox.Show("Aucun répertoire n'a été sélectionné.");
+            }
+            else if (string.IsNullOrEmpty(selectedFile))
+            {
+                MessageBox.Show("Aucun fichier n'a été sélectionné.");
             }
             else
             {
@@ -84,11 +94,16 @@ namespace YetAnotherFileFinder
         // Open the file button. The selected file in the listview will be opened.
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
-            selectedFile = lvwFiles.SelectedItems[0].Text;
+            //Check if a file has been selected in listview.
+            if (lvwFiles.SelectedItems.Count > 0)
+            {
+                selectedFile = lvwFiles.SelectedItems[0].Text;
+            }
+
             if (string.IsNullOrEmpty(selectedDrive))
             {
                 MessageBox.Show("Aucun répertoire n'a été sélectionné.");
-            }else if (string.IsNullOrEmpty(selectedDrive)){
+            }else if (string.IsNullOrEmpty(selectedFile)){
                 MessageBox.Show("Aucun fichier n'a été sélectionné.");
             }
             else

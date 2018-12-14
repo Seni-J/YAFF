@@ -14,7 +14,7 @@ using System.Diagnostics;
  * 
  * Authors: Senistan Jegarajasingam and Jarod Streckeisen.
  * Version: 1.0
- * Updated date: 13 December 2018
+ * Updated date: 14 December 2018
  */
 
 

@@ -196,12 +196,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A4390AE8BCA2BB58144E7B81ACB0C2BE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_ED66A21436324CC7986EEBC840A49A98"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -277,6 +271,12 @@
         "OwnerKey" = "8:_A959211035FB64F2EAFD108083C034AC"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A4390AE8BCA2BB58144E7B81ACB0C2BE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -295,6 +295,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -311,6 +327,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -830,15 +862,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:YAFF"
-        "ProductCode" = "8:{5DC8C782-935A-41A6-8D95-26CF2C97481F}"
-        "PackageCode" = "8:{AF78C3E6-D73E-43D8-906C-1D6D8D26B3C1}"
+        "ProductCode" = "8:{5C2A16A0-D257-403D-BC4A-C0A64376B812}"
+        "PackageCode" = "8:{A2AAD632-2B3B-4134-8F4C-25016D5E5A3D}"
         "UpgradeCode" = "8:{C29C4909-5C1D-48AA-8478-ACEA0805718F}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:YAC - Yet Another Company"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1380,7 +1412,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ED66A21436324CC7986EEBC840A49A98"
             {
-            "SourcePath" = "8:..\\YetAnotherFileFinder\\obj\\Release\\YetAnotherFileFinder.exe"
+            "SourcePath" = "8:..\\YetAnotherFileFinder\\obj\\Debug\\YetAnotherFileFinder.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F1436EFE08E94D50ABDADD7ACDF26330"
