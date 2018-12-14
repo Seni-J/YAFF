@@ -15,7 +15,7 @@ Concernant l'installation du projet pour les personnes voulant améliorer le pro
 git clone https://github.com/Seni-J/YAFF.git
 ```
 
-Une fois le projet cloné ou extrait, rendez vous dans le répertoire "YAFF - source" et vous avez une solution "YetAnotherFileFinder.sln". Vous pouvez lancer le projet en exécutant la solution. les paquets supplémentaires seront téléchargé par Visual Studio directement.
+Une fois le projet cloné ou extrait, rendez-vous dans le répertoire "YAFF - source". Vous aurez une solution "YetAnotherFileFinder.sln" à la racine du dossier précédent. Vous pouvez lancer le projet en exécutant la solution. Les paquets supplémentaires seront téléchargé par Visual Studio directement.
 
 Si vous avez rencontré des bugs que vous souhaitez nous reporter, vous pouvez nous faire un issue sur Github.
 

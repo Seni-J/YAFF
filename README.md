@@ -14,7 +14,7 @@ Pour ce projet, nous étions une équipe de deux techniciens en développement d
 
 ## Objectifs
 
-L’objectif est de fournir une application de recherche de fichier rapide et optimisé comparé à la recherche de l’explorateur Windows. L’utilisateur doit pouvoir trier ses fichiers ainsi que d’ouvrir son fichier avec une application adapté au type fichier.
+L’objectif est de fournir une application de recherche de fichier rapide et optimisé comparé à la recherche de l’explorateur Windows. L’utilisateur doit pouvoir rechercher ses fichiers ainsi que d’ouvrir le fichier qu'il a sélectionné avec l'application adéquat.
 
 Les fonctionnalités demandées du programme sont les suivante :
 
