@@ -39,10 +39,18 @@ namespace YetAnotherFileFinder.Class
             yaffParentForm.lvwFiles.BeginUpdate();
             DirectoryInfo d = new DirectoryInfo(path);//Assuming Test is your Folder
             FileInfo[] Files = d.GetFiles("*.*"); //Getting Text files
-            DirectoryInfo[] Directories = d.GetDirectories("*"); 
+            DirectoryInfo[] Directories = d.GetDirectories("*");
+
+            // Workaround for the progress Bar. it won't work well since we call the same method later on but it shows to the user that the application is doing something.
+            int listcount = Files.Count();
+            yaffParentForm.pgbProgess.Value = 0;
+            yaffParentForm.pgbProgess.Maximum = listcount;
+            yaffParentForm.pgbProgess.Visible = true;
 
             foreach (FileInfo file in Files)
             {
+                yaffParentForm.pgbProgess.Value += 1;
+
                 var lastModified = File.GetLastWriteTime(path + "/" + file.Name);
                 string user = File.GetAccessControl(path + "/" + file.Name).GetOwner(typeof(System.Security.Principal.NTAccount)).ToString();
                 ListViewItem lvi = new ListViewItem();
@@ -55,11 +63,13 @@ namespace YetAnotherFileFinder.Class
                 yaffParentForm.lvwFiles.Items.Add(lvi);
                
             }
-
+            //If there is a folder in an folder, we get in this foreach to call back this method to get the files.
             foreach (DirectoryInfo  Directory in Directories)
             {
                 GetFilesFromSelectedDrive(yaffParentForm, path + "/" + Directory.Name);
             }
+
+            yaffParentForm.pgbProgess.Visible = false;
             yaffParentForm.lvwFiles.EndUpdate();
            
         }
