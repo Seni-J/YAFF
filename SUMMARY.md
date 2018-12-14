@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Yet Another File Finder](README.md)
+* [Arborescence](arborescence.md)
 
 ## DEVELOPER DOCUMENTATION
 
