@@ -9,7 +9,7 @@
 * Windows 8.1
 * Windows 10
 
-La version 4.6.1 de .NET Framework 4.6.1 téléchargeable [ici](https://www.microsoft.com/fr-fr/download/details.aspx?id=53344) .
+La version 4.6.1 de .NET Framework téléchargeable [ici](https://www.microsoft.com/fr-fr/download/details.aspx?id=53344) .
 
 
 

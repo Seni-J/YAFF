@@ -5,6 +5,7 @@
 * Un système d'exploitation sous Windows 7 ou +
 * Visual Studio 2017
 * .NET Framework 4.6.1
+* Git
 
 ## Installation du projet
 
