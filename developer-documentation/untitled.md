@@ -20,7 +20,7 @@ Lorsque le chemin d'accès d'un dossier est plus grand que 255 caractères, l'ap
 
 ### Lecture d'un fichier excel 
 
-Lorsqu'on fait une recherche à l’intérieur d'un fichier excel. Si le fichier excel contient une formule . L'application plante. Nous n'avons pas gérer l'erreur.
+Lorsqu'on fait une recherche à l’intérieur d'un fichier excel. Si le fichier excel contient une formule . L'application plante. Nous n'avons pas géré l'erreur.
 
 ## Amélioration possible
 

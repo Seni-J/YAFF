@@ -50,5 +50,5 @@ Cette classe contiens toutes les fonctions liés aux fichiers
 
 ## Planning
 
-Le planning du projet est sous forme d'un tableau trello disponible ici.
+Le planning du projet est sous forme d'un tableau trello disponible [ici](https://trello.com/b/jYtXQac9/yet-another-file-finder).
 
