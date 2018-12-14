@@ -32,8 +32,6 @@ D’autres fonctionnalités peuvent être ajoutés suivant l’avancement du pro
 
 La documentation a été écrite au format markdown et est disponible sur [Gitbook](https://yaff.gitbook.io/project/).
 
-## 
-
 ## Liens externes
 
 * [Sources](https://github.com/Seni-J/YAFF)
