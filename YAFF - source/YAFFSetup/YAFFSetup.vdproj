@@ -862,15 +862,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:YAFF"
-        "ProductCode" = "8:{5C2A16A0-D257-403D-BC4A-C0A64376B812}"
-        "PackageCode" = "8:{A2AAD632-2B3B-4134-8F4C-25016D5E5A3D}"
+        "ProductCode" = "8:{EB43AE8E-D881-4774-9FE9-4C40680083CA}"
+        "PackageCode" = "8:{DF9AB62A-99DF-4873-807E-E980F52F4D19}"
         "UpgradeCode" = "8:{C29C4909-5C1D-48AA-8478-ACEA0805718F}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:YAC - Yet Another Company"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1412,7 +1412,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ED66A21436324CC7986EEBC840A49A98"
             {
-            "SourcePath" = "8:..\\YetAnotherFileFinder\\obj\\Debug\\YetAnotherFileFinder.exe"
+            "SourcePath" = "8:..\\YetAnotherFileFinder\\obj\\Release\\YetAnotherFileFinder.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F1436EFE08E94D50ABDADD7ACDF26330"

@@ -124,6 +124,7 @@ namespace YetAnotherFileFinder
                 txtKeyWord.Text = "";
                 txtAuthor.Text = "";
                 dtpDateModif.CustomFormat = " ";
+                selectedFile = null;
                 lvwFiles.Items.Clear();
                 pgbProgess.Visible = false;
                 pgbProgess.Value = 0;
