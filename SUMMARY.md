@@ -6,8 +6,8 @@
 
 * [Outils et librairies utilisés](developer-documentation/outils-et-librairies-utilises.md)
 * [Installation](developer-documentation/installation.md)
-* [Conception](developer-documentation/untitled-1.md)
-* [Réalisation](developer-documentation/untitled.md)
+* [Conception](developer-documentation/conception.md)
+* [Réalisation](developer-documentation/realisation.md)
 
 ## USER DOCUMENTATION
 
