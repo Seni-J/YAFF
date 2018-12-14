@@ -34,10 +34,10 @@ La documentation a été écrite au format markdown et est disponible sur [Gitbo
 
 * [Sources](https://github.com/Seni-J/YAFF)
 
-## Auteur
+## Auteurs
 
-* **Senistan Jegarajasingam** - [Seni-J](https://github.com/Seni-J)
-* **Jarod Streckeisen** - [JarodStreck](https://github.com/JarodStreck)
+* **Senistan Jegarajasingam** - _Project Manager / Developer_ - [Seni-J](https://github.com/Seni-J)
+* **Jarod Streckeisen** - _Project Manager /  Developer_ - [JarodStreck](https://github.com/JarodStreck)
 
 
 
