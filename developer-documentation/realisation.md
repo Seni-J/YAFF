@@ -8,7 +8,7 @@ Tout au long du projet, on était pas sûr de la structure de notre projet. On a
 
 ### Lecture dans les documents
 
-On a perdu énormément de temps à essayer de lire à l'intérieur des fichiers de la mauvaise manière. On à commencer par utiliser "interop" qui était pas du tout adapter à notre besoin.
+On a perdu énormément de temps à essayer de lire à l'intérieur des fichiers de la mauvaise manière. On a commencé par utiliser "interop" qui était pas du tout adapté à notre besoin.
 
 On s'est finalement tourné vers des petites librairies qui étaient beaucoup plus simple à utiliser.
 
